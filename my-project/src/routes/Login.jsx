@@ -34,31 +34,21 @@ function Login() {
   return (
     <>
       <div className="form-container">
-        <h1>SEU LOGIN</h1>
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="name">Login</label>
-            <input
-              type="text"
-              id="name"
+        <h3>LOGIN</h3>
+        <form onChange={handleChange}>
+          <input type="text" id="name"
               name="name"
               value={formData.name}
               onChange={handleChange}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="password">Senha</label>
-            <input
+             />
+          <input
               type="password"
               id="password"
               name="password"
               value={formData.password}
               onChange={handleChange}
             />
-          </div>
-          <div className="form-group">
-            <button type="submit">Entrar</button>
-          </div>
+          <input type="submit" onClick={handleSubmit} />
         </form>
       </div>
     </>
