@@ -27,17 +27,16 @@ function App() {
     setFormData({
       name: '',
       email: '',
-      message: ''
     });
   };
 
   return (
     <>
-      <h1>SEU LOGIN</h1>
       <div className="form-container">
+      <h1>SEU LOGIN</h1>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="name">Nome:</label>
+            <label htmlFor="name">Login</label>
             <input
               type="text"
               id="name"
@@ -47,7 +46,7 @@ function App() {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="email">Senha</label>
             <input
               type="email"
               id="email"
@@ -57,16 +56,7 @@ function App() {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="message">Mensagem:</label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-            ></textarea>
-          </div>
-          <div className="form-group">
-            <button type="submit">Enviar</button>
+            <button type="submit">Entrar</button>
           </div>
         </form>
       </div>
