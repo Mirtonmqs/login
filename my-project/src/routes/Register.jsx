@@ -27,7 +27,7 @@ function App() {
   return (
     <>
       <div className="form-container">
-      <h3>Cadastre-se</h3>
+      <h3>Inscreva-se</h3>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Usuário</label>

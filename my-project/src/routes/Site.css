@@ -1,5 +1,9 @@
 .navbar-brand {
   color:darkgreen;
-  text-align: center;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+
 }
 

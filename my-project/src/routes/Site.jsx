@@ -4,7 +4,7 @@ import './Site.css';
 function Site() {
   return (
     <>
-      <nav class="navbar bg-body-tertiary">
+      <nav class="navbar">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             INFO TEC
@@ -53,11 +53,6 @@ function Site() {
                   href="/Login"
                   >
                     Login
-                  </a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link active" href="#">
-                    Quem Somos
                   </a>
                 </li>
               </ul>
