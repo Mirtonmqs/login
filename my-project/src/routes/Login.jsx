@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 
+
 function Login() {
   const [formData, setFormData] = useState({
     name: '',
@@ -35,9 +36,11 @@ function Login() {
     <>
       <div className="form-container">
         <h3>LOGIN</h3>
+        
         <form onChange={handleChange}>
           <input type="text" id="name"
               name="name"
+              placeholder='Usuário'
               value={formData.name}
               onChange={handleChange}
              />
@@ -45,6 +48,7 @@ function Login() {
               type="password"
               id="password"
               name="password"
+              placeholder='Senha'
               value={formData.password}
               onChange={handleChange}
             />

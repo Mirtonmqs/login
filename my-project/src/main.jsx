@@ -10,7 +10,7 @@ import Site from './routes/Site.jsx'
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/Login',
     element: <Login/>,
     errorElement: <ErrorPage />,
   },
