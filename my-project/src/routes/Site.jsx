@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import './Site.css';
 import tecnologia from '../img/tecnologia.png'
-import images from '../img/images.jpeg'
-import tec from '../img/tec.jpeg'
+import images from '../img/tab.png'
+import tec2 from '../img/tec2.jpg'
 import logo from '../img/logoaspec.png';
 
 function Site() {
@@ -10,11 +10,11 @@ function Site() {
     <>
       <nav className="navbar">
       <div className="container-fluid">
-          {/* Substitua o texto pelo código HTML da sua imagem de logo */}
           <a className="icone" href="#">
             <img src={logo} alt={logo} />
           </a>
-          <h3>ygfg</h3>
+          <h3 className='titulo'>TEC </h3>
+          
           <button
             className="navbar-toggler"
             type="button"
@@ -77,7 +77,7 @@ function Site() {
             <img src={images} className="d-block w-100" alt={images} />
           </div>
           <div className="carousel-item">
-          <img src={tec} className="d-block w-100" alt={tec} />
+          <img src={tec2} className="d-block w-100" alt={tec2} />
           </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
