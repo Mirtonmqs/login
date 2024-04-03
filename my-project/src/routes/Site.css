@@ -21,3 +21,9 @@
   left: 25%;
   width: 50%;
 }
+
+.icone {
+  height: 40px;
+  display: flex;
+  margin-right: 20px;
+}

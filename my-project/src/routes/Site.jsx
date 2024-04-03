@@ -3,57 +3,60 @@ import './Site.css';
 import tecnologia from '../img/tecnologia.png'
 import images from '../img/images.jpeg'
 import tec from '../img/tec.jpeg'
+import logo from '../img/logoaspec.png';
 
 function Site() {
   return (
     <>
-      <nav class="navbar">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            INFO TEC
+      <nav className="navbar">
+      <div className="container-fluid">
+          {/* Substitua o texto pelo código HTML da sua imagem de logo */}
+          <a className="icone" href="#">
+            <img src={logo} alt={logo} />
           </a>
+          <h3>ygfg</h3>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
           <div
-            class="offcanvas offcanvas-end"
-            tabindex="-1"
+            className="offcanvas offcanvas-end"
+            tabIndex="-1"
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
           >
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+            <div className="offcanvas-header">
+              <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
                 Menu
               </h5>
               <button
                 type="button"
-                class="btn-close"
+                className="btn-close"
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
               ></button>
             </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
-                <li class="nav-item">
+            <div className="offcanvas-body">
+              <ul className="navbar-nav justify-content-start flex-grow-1 pe-3">
+                <li className="nav-item">
                   <a
-                    class="nav-link active"
+                    className="nav-link active"
                     aria-current="page"
                     href="/Register"
                   >
                     Inscreva-se
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link active" 
-                  aria-current="page" 
-                  href="/Login"
+                <li className="nav-item">
+                  <a className="nav-link active" 
+                    aria-current="page" 
+                    href="/Login"
                   >
                     Login
                   </a>
@@ -63,6 +66,7 @@ function Site() {
           </div>
         </div>
       </nav>
+
 
       <div id="carouselExampleFade" className="carousel slide carousel-fade">
         <div className="carousel-inner">
