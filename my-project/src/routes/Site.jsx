@@ -8,7 +8,7 @@ import logo from '../img/logoaspec.png';
 function Site() {
   return (
     <>
-      <nav className="navbar">
+      {/* <nav className="navbar">
       <div className="container-fluid">
           <a className="icone" href="#">
             <img src={logo} alt={logo} />
@@ -64,6 +64,22 @@ function Site() {
               </ul>
             </div>
           </div>
+        </div>
+      </nav> */}
+
+<nav className="nav-bar">
+        <div className="logo">
+          <h1>Logo</h1>
+        </div>
+        <div className="nav-list">
+          <ul>
+            <li className='nav-item'><a href="#" className='nav-link'>Início</a></li>
+            <li className='nav-item'><a href="#" className='nav-link'>Projetos</a></li>
+            <li className='nav-item'><a href="#" className='nav-link'>Sobre</a></li>
+          </ul>
+        </div>
+        <div className='login-button'>
+          <button><a href="#">Entrar</a></button>
         </div>
       </nav>
 

@@ -1,13 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;;
+}
+
 .navbar {
   position: relative;
   background-color:lightblue;
-  padding: 8px; /* Adicionando um preenchimento para garantir espaço suficiente */
+  padding: 8px; 
 }
 
 .icone {
   height: 40px;
   display: flex;
   margin-left: 00px; 
+ 
 }
 
 .titulo {
