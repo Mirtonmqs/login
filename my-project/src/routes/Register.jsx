@@ -27,10 +27,10 @@ function App() {
   return (
     <>
       <div className="form-container">
-      <h3>Inscreva-se</h3>
+      <h3>Registre-se</h3>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="name">Usuário</label>
+            <label htmlFor="name">Nome</label>
             <input
               type="text"
               id="name"
@@ -40,12 +40,22 @@ function App() {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">Sobrenome</label>
             <input
               type="email"
               id="email"
               name="email"
               value={formData.email}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="senha">E-mail</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              value={formData.password}
               onChange={handleChange}
             />
           </div>

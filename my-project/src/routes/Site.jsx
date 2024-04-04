@@ -50,7 +50,7 @@ function Site() {
                     aria-current="page"
                     href="/Register"
                   >
-                    Inscreva-se
+                    Registre-se
                   </a>
                 </li>
                 <li className="nav-item">
