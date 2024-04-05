@@ -1,20 +1,20 @@
 import { useState } from 'react';
 import './Site.css';
-import tecnologia from '../img/tecnologia.png'
-import images from '../img/tab.png'
-import tec2 from '../img/tec2.jpg'
+import tecnologia from '../img/tecnologia.png';
+import images from '../img/tab.png';
+import tec2 from '../img/tec2.jpg';
 import logo from '../img/logoaspec.png';
 
 function Site() {
   return (
     <>
-      {/* <nav className="navbar">
-      <div className="container-fluid">
+      <nav className="navbar">
+        <div className="container-fluid">
           <a className="icone" href="#">
             <img src={logo} alt={logo} />
           </a>
-          <h3 className='titulo'>TEC </h3>
-          
+          <h3 className="titulo">TEC </h3>
+
           <button
             className="navbar-toggler"
             type="button"
@@ -54,8 +54,9 @@ function Site() {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" 
-                    aria-current="page" 
+                  <a
+                    className="nav-link active"
+                    aria-current="page"
                     href="/Login"
                   >
                     Login
@@ -65,45 +66,50 @@ function Site() {
             </div>
           </div>
         </div>
-      </nav> */}
-
-<nav className="nav-bar">
-        <div className="logo">
-          <h1>Logo</h1>
-        </div>
-        <div className="nav-list">
-          <ul>
-            <li className='nav-item'><a href="#" className='nav-link'>Início</a></li>
-            <li className='nav-item'><a href="#" className='nav-link'>Projetos</a></li>
-            <li className='nav-item'><a href="#" className='nav-link'>Sobre</a></li>
-          </ul>
-        </div>
-        <div className='login-button'>
-          <button><a href="#">Entrar</a></button>
-        </div>
       </nav>
 
+     <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <img src={tecnologia} className="d-block w-100" alt={tecnologia} />
+    </div>
+    <div className="carousel-item">
+      <img src={images} className="d-block w-100" alt={images} />
+    </div>
+    <div className="carousel-item">
+      <img src={tec2} className="d-block w-100" alt={tec2} />
+    </div>
+  </div>
+  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Previous</span>
+  </button>
+  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Next</span>
+  </button>
+</div>
 
-      <div id="carouselExampleFade" className="carousel slide carousel-fade">
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img src={tecnologia} className="d-block w-100" alt={tecnologia} />
-          </div>
-          <div className="carousel-item">
-            <img src={images} className="d-block w-100" alt={images} />
-          </div>
-          <div className="carousel-item">
-          <img src={tec2} className="d-block w-100" alt={tec2} />
-          </div>
-        </div>
-        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
+      <div className="container">
+        <h2>Qual a função do desenvolvedor Front End?</h2>
+        <p>
+          O profissional desenvolvedor front-end é o responsável por colocar em
+          prática, através de códigos, o design de um site ou interface.
+          Enquanto o web design projeta o visual de um site, o desenvolvimento
+          front-end implementa esse design através de códigos, como HTML, CSS e
+          JavaScript.
+        </p>
+        <p>
+          O front-end também deve ser capaz de se “comunicar” com a linguagem
+          utilizada no back-end, que é a parte estrutural de sites e
+          plataformas. Dessa forma, o visual de uma interface conseguirá ter
+          suas funções correspondidas, como quando clicamos em um botão de
+          “enviar mensagem” e a mensagem realmente é enviada. Podemos dizer que
+          tudo o que um usuário vê, interage ou clica é fruto do trabalho de um
+          desenvolvedor front-end, que deve garantir que o site ou interface
+          funcione corretamente e siga um design padrão em todos os
+          dispositivos.
+        </p>
       </div>
     </>
   );

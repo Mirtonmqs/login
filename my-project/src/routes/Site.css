@@ -1,43 +1,92 @@
-* {
-  padding: 0;
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-style: normal;;
-}
-
+/* Estilos para a barra de navegação */
 .navbar {
-  position: relative;
-  background-color:lightblue;
-  padding: 8px; 
+  background-color: darkslategrey;
+  color: #fff;
+  padding: 10px;
 }
 
-.icone {
-  height: 40px;
+.navbar .container-fluid {
   display: flex;
-  margin-left: 00px; 
- 
+  align-items: center;
 }
 
-.titulo {
-  color: black;
-  margin-top: 10px; 
-  font-family: "Bebas Neue", sans-serif;
+.navbar .titulo {
+  margin: 0;
+  padding: 0 10px;
+  font-family: "Russo One", sans-serif;
   font-weight: 400;
-  font-style: normal;;
+  font-style: normal;
+  color: #f9f9f9;
 }
 
-.nav-item {
-  font-size: 20px;
+/* Estilos para o ícone */
+.navbar .icone img {
+  width: 40px;
+  /* Ajuste o tamanho conforme necessário */
+  height: auto;
+
 }
 
+/* Estilos para o botão de alternar o menu */
 .navbar-toggler {
-  margin-right: 10px; 
-} 
+  color: #fff;
+  border: none;
+  background-color: transparent;
+}
 
-#carouselExampleFade {
+.navbar-toggler-icon {
+  background-color: white;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+/* Estilos para o menu offcanvas */
+.offcanvas-body {
+  padding: 20px;
+}
+
+.offcanvas-body .nav-item {
+  margin-bottom: 10px;
+}
+
+.offcanvas-body .nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.offcanvas-body .nav-link:hover {
+  text-decoration: underline;
+}
+
+#carouselExampleFade .carousel-inner .carousel-item img {
+  width: 900px;
+  height: 300px;
+  object-fit: contain;
+  /* Mantém a proporção da imagem e a exibe completamente */
+  object-position: center;
+  margin-top: 30px;
+}
+
+.container {
+  max-width: 90%;
+  margin-top: 35px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: relative;
-  top: 5vh; 
-  left: 25%;
-  width: 50%;
+  z-index: 1;
+}
+
+.container h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.container p {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 18px;
+
 }
