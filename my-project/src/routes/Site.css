@@ -90,3 +90,18 @@
   font-size: 18px;
 
 }
+/* styles.css */
+
+.frontImg img {
+  max-width: 400px; 
+  height: auto; 
+  display: block; 
+  margin: 0 auto; 
+  margin-top: 20px; 
+  
+}
+.container h3 {
+  font-size: 20px;
+  text-align: justify;
+}
+
