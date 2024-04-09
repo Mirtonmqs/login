@@ -24,7 +24,6 @@
   width: 40px;
   /* Ajuste o tamanho conforme necessário */
   height: auto;
-
 }
 
 /* Estilos para o botão de alternar o menu */
@@ -40,22 +39,15 @@
   padding: 10px;
 }
 
-/* Estilos para o menu offcanvas */
-.offcanvas-body {
-  padding: 20px;
+.offcanvas-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-.offcanvas-body .nav-item {
-  margin-bottom: 10px;
-}
-
-.offcanvas-body .nav-link {
-  color: #fff;
-  text-decoration: none;
-}
-
-.offcanvas-body .nav-link:hover {
-  text-decoration: underline;
+.form-label {
+  margin-bottom: 0;
 }
 
 #carouselExampleFade .carousel-inner .carousel-item img {
