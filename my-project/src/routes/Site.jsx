@@ -28,22 +28,6 @@ function Site() {
   <>
   <DefaultLayout>
 
-      <div
-        id="carouselExampleFade"
-        className="carousel slide carousel-fade"
-        data-bs-ride="carousel"
-      >
-        <div className="carousel-inner">
-          <div className={`carousel-item ${activeIndex === 0 ? 'active' : ''}`}>
-            <img src={tecnologia} className="d-block w-100" alt={tecnologia} />
-          </div>
-          <div className={`carousel-item ${activeIndex === 1 ? 'active' : ''}`}>
-            <img src={images} className="d-block w-100" alt={images} />
-          </div>
-          <div className={`carousel-item ${activeIndex === 2 ? 'active' : ''}`}>
-            <img src={tec2} className="d-block w-100" alt={tec2} />
-          </div>
-        </div>
     
         <div className="container">
           <h2>Bem-Vindo à Escola de Programaçao Tec</h2>
@@ -56,8 +40,7 @@ function Site() {
             necessidades e aspirações de todos os nossos alunos.
           </p>
         </div>
-      </div>
-
+      
       <div className="container">
         <h2>O que você irá aprender para ser um Desenvolvedor Front End.</h2>
         <a className="frontImg" href="#">
