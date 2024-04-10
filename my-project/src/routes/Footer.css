@@ -1,0 +1,19 @@
+/* Footer.css */
+.footer {
+  background-color: darkslategrey;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  position:static;
+  bottom: 0;
+  max-width: 100%;
+  color: aliceblue;
+}
+
+.form {
+  background-color:lightslategray;
+  width: 100%; 
+  margin: 0 auto;
+  padding: 30px; 
+  position: relative;
+}

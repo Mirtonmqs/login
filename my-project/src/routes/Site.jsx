@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import 'tailwindcss/tailwind.css'; 
 import './Site.css'; 
+import './Header.css'; 
 import tecnologia from '../img/tecnologia.png';
 import images from '../img/tab.png';
 import tec2 from '../img/tec2.jpg';
 import logo from '../img/logoaspec.png';
 import front from '../img/front.jpg';
+import { DefaultLayout } from '../routes/DefaultLayout';
+
 
 function Site() {
   const [activeIndex, setActiveIndex] = useState(0); // Estado para controlar o índice do slide ativo
@@ -24,73 +26,7 @@ function Site() {
 
   return (
   <>
-    <nav className="navbar">
-      <div className="container-fluid">
-        <a className="icone" href="#">
-          <img src={logo} alt={logo} />
-        </a>
-        <h3 className="titulo">TEC</h3>
-        
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation"
-        >
-          <span>Login</span>
-        </button>
-        
-        <div
-          className="offcanvas offcanvas-end"
-          tabIndex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div className="offcanvas-header">
-            <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
-              Login
-            </h5>
-            <button
-              type="button"
-              className="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-            <form id="loginForm">
-              <div className="mb-3">
-                <label htmlFor="username" className="form-label">
-                  Usuário
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="username"
-                  name="username"
-                  required
-                />
-              </div>
-              <div className="mb-3">
-                <label htmlFor="password" className="form-label">
-                  Senha
-                </label>
-                <input
-                  type="password"
-                  className="form-control"
-                  id="password"
-                  name="password"
-                  required
-                />
-              </div>
-              <button type="submit" className="btn btn-primary">
-                Entrar
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </nav>
+  <DefaultLayout>
 
       <div
         id="carouselExampleFade"
@@ -108,30 +44,7 @@ function Site() {
             <img src={tec2} className="d-block w-100" alt={tec2} />
           </div>
         </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleFade"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleFade"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button>
+    
         <div className="container">
           <h2>Bem-Vindo à Escola de Programaçao Tec</h2>
           <p>
@@ -180,6 +93,7 @@ function Site() {
           (PWAs).
         </p>
       </div>
+            </DefaultLayout>
     </>
   );
 }
