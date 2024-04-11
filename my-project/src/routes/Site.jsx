@@ -30,7 +30,7 @@ function Site() {
 
     
         <div className="container">
-          <h2>Bem-Vindo à Escola de Programaçao Tec</h2>
+          <h2> Olá, Bem-Vindo à Escola de Programaçao Tec</h2>
           <p>
             Na Escola Tec, estamos comprometidos em capacitar indivíduos
             apaixonados por tecnologia e transformá-los em programadores
