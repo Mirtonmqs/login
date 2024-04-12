@@ -1,51 +1,25 @@
-/* Estilos para a barra de navegação */
+/* Estilos para o barra de navegação */
 .navbar {
   background-color: darkslategrey;
   color: #fff;
   padding: 10px;
-}
-
-.navbar .container-fluid {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-.navbar .titulo {
-  margin: 0;
-  padding: 0 10px;
-  font-family: "Russo One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #f9f9f9;
-}
-
-/* Estilos para o ícone */
-.navbar .icone img {
+.logo img {
   width: 40px;
-  /* Ajuste o tamanho conforme necessário */
   height: auto;
+  margin-left: 20px;
 }
 
-/* Estilos para o botão de alternar o menu */
-.navbar-toggler {
-  color: #fff;
-  border: none;
-  background-color: transparent;
+.titulo {
+  font-size: 28px;
+  font-family: "Russo One", sans-serif;
 }
 
-.navbar-toggler-icon {
-  background-color: white;
-  border-radius: 6px;
-  padding: 10px;
-}
-
-.offcanvas-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.form-label {
-  margin-bottom: 0;
+.menu-btn {
+  font-size:  25px;
+  margin-right: 20px;
 }

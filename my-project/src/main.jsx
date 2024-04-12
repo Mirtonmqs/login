@@ -1,28 +1,23 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Register from './routes/Register.jsx'
-import ErrorPage from './routes/ErrorPage.jsx'
-import Site from './routes/Site.jsx'
+import Register from './routes/Register';
+import ErrorPage from './routes/ErrorPage';
+import Site from './routes/Site';
 
-const router = createBrowserRouter([
-
-  {
-    path: '/Register',
-    element: <Register/>,
-    errorElement: <ErrorPage />,
-  }, 
-  {
-    path: '/',
-    element: <Site/>,
-    errorElement: <ErrorPage />,
-  }, 
-]);
+const App = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Site />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/errorpage" element={<ErrorPage />} />
+    </Routes>
+  </BrowserRouter>
+);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
-)
+    <App />
+  </React.StrictMode>
+);
