@@ -1,7 +1,6 @@
 import React from 'react';
 import './Site.css';
 import './Header.css';
-import logo from '../img/logoaspec.png';
 import front from '../img/front.jpg';
 import { DefaultLayout } from '../routes/DefaultLayout';
 

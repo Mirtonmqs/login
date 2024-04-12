@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Register.css'; 
+import logo from '../img/logoaspec.png';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -22,11 +23,33 @@ function App() {
     setFormData({
       name: '',
       email: '',
+      password: '' // Limpe também o campo 'password'
     });
   };
 
   return (
     <>
+     {/* Navbar */}
+     <nav className="navbar">
+     <div className="logo">
+          <a href="#">
+            <img src={logo} alt="Logo" />
+          </a>
+        </div>
+         <div className="titulo">TEC</div>
+        <ul className="nav-links">
+          <li>
+            <a href="#">Página Principal</a>
+          </li>
+          <li>
+            <a href="#">Sobre</a>
+          </li>
+          <li>
+            <a href="#">Contato</a>
+          </li>
+        </ul>
+      </nav>
+    
       <div className="form-container">
       <h3>Registre-se</h3>
         <form onSubmit={handleSubmit}>
