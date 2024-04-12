@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Sidebar.css';
+import '../style/Sidebar.css';
 
 const Sidebar = ({ isOpen, toggle }) => {
   const [username, setUsername] = useState('');

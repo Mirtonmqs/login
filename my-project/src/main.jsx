@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Register from './routes/Register';
-import ErrorPage from './routes/ErrorPage';
-import Site from './routes/Site';
+import Register from './Pages/Home';
+import ErrorPage from './Pages/ErrorPage';
+import Site from './Pages/Site';
 
 const App = () => (
   <BrowserRouter>
@@ -19,5 +19,5 @@ const App = () => (
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
