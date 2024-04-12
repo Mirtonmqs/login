@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './Site.css';
+import '../style/Header.css';
 import logo from '../img/logoaspec.png';
-import Sidebar from './Sidebar'; // Importe o componente Sidebar
+import Sidebar from './Sidebar';
 
 const Header = () => {
   // Estado para controlar a visibilidade do Sidebar
@@ -22,9 +22,7 @@ const Header = () => {
             <img src={logo} alt="Logo" />
           </a>
         </div>
-        {/* Título */}
         <div className="titulo">TEC</div>
-        {/* Botão para abrir o Sidebar */}
         <div className="menu-btn" onClick={toggleSidebar}>
           Login
         </div>
