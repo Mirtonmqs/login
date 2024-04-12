@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Sidebar.css';
+import '../style/SidebarHome.css';
 
 const Sidebar = ({ isOpen, toggle }) => {
   const [username, setUsername] = useState('');
@@ -19,7 +19,7 @@ const Sidebar = ({ isOpen, toggle }) => {
     // Aqui você pode implementar a lógica de autenticação
     if (username === 'aspec' && password === '1234') {
       // Redirecionamento usando window.location.href
-      window.location.href = '/register'; // Substitua '/dashboard' pelo URL desejado
+      window.location.href = '/home'; // Substitua '/dashboard' pelo URL desejado
 
       // Resetar os campos após o login (opcional)
       setUsername('');
