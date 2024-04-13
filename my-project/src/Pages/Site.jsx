@@ -5,8 +5,6 @@ import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
 import Footer from '../components/Footer'; // Importe o Footer
 
-
-
 const Site = () => {
   const [sidebarVisible, setSidebarVisible] = useState(false);
 
