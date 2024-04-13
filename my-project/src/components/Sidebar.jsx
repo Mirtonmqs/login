@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../style/SidebarHome.css';
+import '../styles/Sidebar.css';
 
 const Sidebar = ({ isOpen, toggle }) => {
   const [username, setUsername] = useState('');
@@ -14,21 +14,16 @@ const Sidebar = ({ isOpen, toggle }) => {
   };
 
   const handleLogin = (e) => {
-    e.preventDefault(); // Evita o comportamento padrão do formulário
+    e.preventDefault(); 
 
-    // Aqui você pode implementar a lógica de autenticação
     if (username === 'aspec' && password === '1234') {
-      // Redirecionamento usando window.location.href
-      window.location.href = '/home'; // Substitua '/dashboard' pelo URL desejado
+      window.location.href = '/home'; 
 
       // Resetar os campos após o login (opcional)
       setUsername('');
       setPassword('');
     } else {
-      // Exiba uma mensagem de erro ou feedback ao usuário
       alert('Credenciais inválidas. Tente novamente.');
-
-      // Limpe os campos (opcional)
       setUsername('');
       setPassword('');
     }
@@ -37,9 +32,7 @@ const Sidebar = ({ isOpen, toggle }) => {
   return (
     <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
       <div className="sidebar-content">
-        <div className="sidebar-header">
-          {/* Conteúdo opcional do cabeçalho */}
-        </div>
+        {/* Formulário de login */}
         <form className="login-form" onSubmit={handleLogin}>
           <label htmlFor="username">E-mail:</label>
           <input

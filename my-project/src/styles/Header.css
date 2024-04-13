@@ -1,25 +1,32 @@
-/* Estilos para o barra de navegação */
+
 .navbar {
-  background-color: darkslategrey;
-  color: #fff;
-  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
 }
 
 .logo img {
   width: 40px;
-  height: auto;
-  margin-left: 20px;
 }
 
 .titulo {
-  font-size: 28px;
-  font-family: "Russo One", sans-serif;
+  font-size: 24px;
 }
 
-.menu-btn {
-  font-size:  25px;
-  margin-right: 20px;
+.login-btn {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transição suave para animações */
+}
+
+/* Estilo para o hover do botão */
+.login-btn:hover {
+  border-color: #eeede8; /* Cor da borda ao passar o mouse */
 }
