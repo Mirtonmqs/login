@@ -3,7 +3,7 @@ import '../styles/Site.css';
 import front from '../img/front.jpg';
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
-import Footer from '../components/Footer'; // Importe o Footer
+import Footer from '../components/Footer'; 
 
 const Site = () => {
   const [sidebarVisible, setSidebarVisible] = useState(false);
@@ -21,7 +21,7 @@ const Site = () => {
         {/* Renderiza o Header dentro do DefaultLayout */}
         <Header toggleSidebar={toggleSidebar} />
 
-        {/* Conteúdo do site dentro do DefaultLayout */}
+      
         <div className="container">
           <h2>Olá, Bem-Vindo à Escola de Programação Tec</h2>
           <p>
@@ -34,7 +34,7 @@ const Site = () => {
           </p>
         </div>
 
-        {/* Seção de tecnologias Front End */}
+      
         <div className="container">
           <h2>O que você irá aprender para ser um Desenvolvedor Front End</h2>
           <a className="frontImg" href="#">

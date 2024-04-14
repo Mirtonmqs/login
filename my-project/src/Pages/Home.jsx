@@ -1,9 +1,11 @@
 import { useState } from 'react';
-import '../styles/Home.css'; 
+import '../styles/Home.css';
 import logo from '../img/logoaspec.png';
 import '../styles/SidebarHome.css';
 
+
 function App() {
+  // useState para gerenciar o estado do formulário e a visibilidade da barra lateral
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,6 +14,7 @@ function App() {
 
   const [showSidebar, setShowSidebar] = useState(false);
 
+  // Função para lidar com a mudança nos inputs do formulário
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -20,10 +23,12 @@ function App() {
     });
   };
 
+  // Função para lidar com o envio do formulário
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
 
+    // Reiniciando os campos do formulário após o envio
     setFormData({
       name: '',
       email: '',
@@ -31,14 +36,14 @@ function App() {
     });
   };
 
-
+  // Função para alternar a visibilidade da barra lateral
   const toggleSidebar = () => {
-    setShowSidebar(!showSidebar); // Toggle sidebar visibility
+    setShowSidebar(!showSidebar); // Toggle da visibilidade da barra lateral
   };
+
 
   return (
     <>
-      {/* Navbar */}
       <nav className="navbar">
         <div className="logo">
           <a href="#">
@@ -52,12 +57,12 @@ function App() {
         </button>
       </nav>
 
+  
       <aside className={`sidebar ${showSidebar ? 'open' : ''}`}>
-       
         <div className="sidebar-content">
-          <button >Registre-se</button>
-          <button >Quem Somos</button>
-          <button >Contatos</button>
+          <button>Registre-se</button>
+          <button>Quem Somos</button>
+          <button>Contatos</button>
         </div>
       </aside>
 
@@ -65,6 +70,7 @@ function App() {
       <div className="form-container">
         <h3>Registre-se</h3>
         <form onSubmit={handleSubmit}>
+          {/* Inputs do formulário */}
           <div className="form-group">
             <label htmlFor="name">Nome</label>
             <input
@@ -95,6 +101,7 @@ function App() {
               onChange={handleChange}
             />
           </div>
+          {/* Botão de envio do formulário */}
           <div className="form-group">
             <button type="submit">Cadastrar</button>
           </div>
