@@ -7,12 +7,12 @@
   background-color: #333;
   color: #fff;
   z-index: 2000;
-  transition: right 0.5s ease; /* Aumenta a duração da transição para 0.5 segundos (mais lenta) */
+  transition: right 0.5s ease;
   padding: 20px;
 }
 
 .sidebar.open {
-  right: 0; /* Move o sidebar para a posição totalmente visível quando a classe .open é aplicada */
+  right: 0;
 }
 
 .sidebar-header {
@@ -20,6 +20,15 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column; /* Coloca os elementos um abaixo do outro */
+}
+
+.sidebar-content button {
+  margin-bottom: 10px; /* Espaçamento entre os botões */
 }
 
 .login-form {
