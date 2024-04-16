@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Sidebar.css';
 
-const Sidebar = ({ isOpen, toggle }) => {
+const Sidebar = ({ isOpen }) => {
   // Declaração de estados locais usando o hook useState
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
