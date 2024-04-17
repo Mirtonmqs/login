@@ -6,6 +6,7 @@ import Home from './Pages/Home';
 import ErrorPage from './Pages/ErrorPage';
 import Site from './Pages/Site';
 import Login from './Pages/Login';
+import Register from './Pages/Register';
 
 const App = () => (
   <BrowserRouter>
@@ -14,6 +15,7 @@ const App = () => (
       <Route path="/home" element={<Home />} />
       <Route path="/errorpage" element={<ErrorPage />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
     </Routes>
   </BrowserRouter>
 );
