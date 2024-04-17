@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/Register.css';
+import '../styles/Site.css';
 
 const Register = () => {
   const [username, setUsername] = useState('');
@@ -29,8 +29,8 @@ const Register = () => {
     }
   };
   return (
-    <div className="bglight">
-      <div className="login">
+    <div className="bg-light">
+      <div className="register">
         <form className="login-form" onSubmit={handleLogin}>
           <h1>Aspec</h1>
           <h3>Registre-se</h3>

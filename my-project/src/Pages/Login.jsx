@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/Login.css';
+import '../styles/Site.css';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -31,7 +31,7 @@ const Login = () => {
 
   };
   return (
-    <div className="bglight">
+    <div className="bg-light">
       <div className="login">
         <form className="login-form" onSubmit={handleLogin}>
           <h1>Aspec</h1>
@@ -45,7 +45,6 @@ const Login = () => {
               value={username}
               onChange={handleUsernameChange}
             />
-         
             <label htmlFor="password">Password:</label>
             <input
               type="password"
