@@ -2,70 +2,66 @@ import React, { useState } from 'react';
 import '../styles/Site.css';
 
 const Register = () => {
-  const [username, setUsername] = useState('');
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleUsernameChange = (e) => {
-    setUsername(e.target.value);
+  const handleFullNameChange = (e) => {
+    setFullName(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
   };
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
 
-  const handleLogin = (e) => {
+  const handleRegister = (e) => {
     e.preventDefault();
 
-    if (username === 'aspec' && password === '1234') {
-      window.location.href = '/';
-
-      setUsername('');
+    if (fullName && email && password) {
+      alert('Registro bem-sucedido!');
+      setFullName('');
+      setEmail('');
       setPassword('');
     } else {
-      alert('Credenciais inválidas. Tente novamente.');
-
-      setUsername('');
-      setPassword('');
+      alert('Preencha todos os campos.');
     }
   };
+
   return (
     <div className="bg-light">
       <div className="register">
-        <form className="login-form" onSubmit={handleLogin}>
+        <form className="register-form" onSubmit={handleRegister}>
           <h1>Aspec</h1>
           <h3>Registre-se</h3>
           <div className="form">
-            <label htmlFor="username"></label>
+            <label htmlFor="fullName">Nome completo:</label>
             <input
-              className="email"
+              className="name"
               type="text"
-              id="username"
+              id="fullName"
               placeholder="Nome completo"
-              value={username}
-              onChange={handleUsernameChange}
+              value={fullName}
+              onChange={handleFullNameChange}
             />
+            <label htmlFor="email">Email:</label>
             <input
               className="email"
               type="text"
-              id="username"
+              id="email"
               placeholder="Email"
-              value={username}
-              onChange={handleUsernameChange}
+              value={email}
+              onChange={handleEmailChange}
             />
+            <label htmlFor="password">Senha:</label>
             <input
-              className="email"
-              type="text"
-              id="username"
-              placeholder="Senha"
-              value={username}
-              onChange={handleUsernameChange}
-            />
-
-            <label htmlFor="password">Password:</label>
-            <input
+              className="password"
               type="password"
               id="password"
-              placeholder="Confirme sua Senha"
+              placeholder="Crie sua Senha"
               value={password}
               onChange={handlePasswordChange}
             />

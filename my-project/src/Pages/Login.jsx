@@ -66,7 +66,7 @@ const Login = () => {
           {error && <p className="error-message">{error}</p>}
 
           <div className='Inscrever'>
-            <p>Não tem uma conta? <a href="http://localhost:5173/registro">Cadastre-se</a></p>
+            <p>Não tem uma conta? <a href="http://localhost:5173/registro">Registre-se</a></p>
             <p>Esqueceu o <a href="">Email / Senha?</a></p>
           </div>
         </form>
