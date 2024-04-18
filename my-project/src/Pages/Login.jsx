@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import '../styles/Site.css';
+import axios from 'axios';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -13,32 +15,36 @@ const Login = () => {
     setPassword(e.target.value);
   };
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    if (username === 'aspec' && password === '1234') {
-      window.location.href = '/';
+    try {
+      const response = await axios.post('/api/login', { username, password });
 
-      setUsername('');
-      setPassword('');
-    } else {
-      alert('Credenciais inválidas. Tente novamente.');
-
+      if (response.data.success) {
+        localStorage.setItem('token', response.data.token);
+        window.location.href = '/';
+      } else {
+        setError('Credenciais inválidas. Tente novamente.');
+        setUsername('');
+        setPassword('');
+      }
+    } catch (error) {
+      console.error('Erro ao fazer a solicitação:', error);
+      setError('Erro ao fazer a solicitação. Por favor, tente novamente.');
       setUsername('');
       setPassword('');
     }
-
-
   };
+
   return (
     <div className="bg-light">
       <div className="login">
         <form className="login-form" onSubmit={handleLogin}>
           <h1>Aspec</h1>
           <div className='form'>
-            <label htmlFor="username"></label>
+            <label htmlFor="username">Email:</label>
             <input
-              className="email"
               type="text"
               id="username"
               placeholder="Email"
@@ -49,18 +55,20 @@ const Login = () => {
             <input
               type="password"
               id="password"
-              placeholder="Password"
+              placeholder="Senha"
               value={password}
               onChange={handlePasswordChange}
             />
           </div>
 
-          <button type="submit">Login</button>
+          <button className='btn' type="submit">Login</button>
 
-        <div className='Inscrever'>
-          <p>Não tem uma conta?  <a href="">Cadastre-se</a></p>
-          <p>Esqueceu o  <a href="">Email / Senha?</a></p>
-        </div>
+          {error && <p className="error-message">{error}</p>}
+
+          <div className='Inscrever'>
+            <p>Não tem uma conta? <a href="http://localhost:5173/registro">Cadastre-se</a></p>
+            <p>Esqueceu o <a href="">Email / Senha?</a></p>
+          </div>
         </form>
       </div>
     </div>

@@ -70,7 +70,7 @@ const Register = () => {
               onChange={handlePasswordChange}
             />
           </div>
-          <button type="submit">Login</button>
+          <button type="submit">Registrar</button>
         </form>
       </div>
     </div>
