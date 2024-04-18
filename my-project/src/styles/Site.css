@@ -94,7 +94,7 @@ label {
 }
 
 
-button {
+.btn{
   width: 88%;
   background-color: #6c63fe;
   padding: 20px;

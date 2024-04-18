@@ -3,36 +3,38 @@ import '../styles/Site.css';
 import axios from 'axios';
 
 const Login = () => {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const handleUsernameChange = (e) => {
-    setUsername(e.target.value);
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
   };
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
 
+  const api_url = '#######';
+
   const handleLogin = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('/api/login', { username, password });
+      const response = await axios.post(api_url, { email, password });
 
       if (response.data.success) {
         localStorage.setItem('token', response.data.token);
         window.location.href = '/';
       } else {
-        setError('Credenciais inválidas. Tente novamente.');
-        setUsername('');
+        setError('Erro nas credenciais');
+        setEmail('');
         setPassword('');
       }
     } catch (error) {
       console.error('Erro ao fazer a solicitação:', error);
-      setError('Erro ao fazer a solicitação. Por favor, tente novamente.');
-      setUsername('');
+      setError('Erro ao fazer a solicitação.');
+      setEmail('');
       setPassword('');
     }
   };
@@ -43,13 +45,13 @@ const Login = () => {
         <form className="login-form" onSubmit={handleLogin}>
           <h1>Aspec</h1>
           <div className='form'>
-            <label htmlFor="username">Email:</label>
+            <label htmlFor="email">Email:</label>
             <input
               type="text"
-              id="username"
+              id="email"
               placeholder="Email"
-              value={username}
-              onChange={handleUsernameChange}
+              value={email}
+              onChange={handleEmailChange}
             />
             <label htmlFor="password">Password:</label>
             <input
