@@ -96,50 +96,59 @@ label {
 }
 
 
+/* Header */
 /* Header.css */
 
 .navbar {
-  margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #5978e0;
   color: white;
-  padding: 0px 20px;
+  padding: 5px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+}
+
+.logo {
+  margin-left: 20px; 
 }
 
 .logo img {
-  margin-top: 5px;
-  width: 20px;
+  width: 40px; 
   height: auto;
 }
 
 .titulo {
   font-size: 1.5rem;
+  text-align: center; 
 }
 
 .login-btn {
   background-color: #0966c9;
   color: white;
-  padding: 2px 16px;
+  padding: 8px 16px;
   border: none;
   cursor: pointer;
+  margin-right: 20px; 
 }
 
 .sidebar {
   position: fixed;
-  top: 40px;
-  right: -200px; 
+  top: 59px;
+  right: -200px;
   width: 300px;
   height: 100vh;
   background-color: #f0ebeb;
   padding: 20px;
-
 }
 
 .sidebar ul {
   list-style: none;
-  padding: 0px;
+  padding: 0;
 }
 
 .sidebar ul li {
