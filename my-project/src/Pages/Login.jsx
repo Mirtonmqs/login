@@ -1,22 +1,13 @@
-import React, { useState } from 'react';
-import '../styles/Site.css';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const api_url = '#######';
-
+  
+  const api_url = '#######'; 
+  
   const handleLogin = async (e) => {
     e.preventDefault();
 
@@ -25,6 +16,7 @@ const Login = () => {
 
       if (response.data.success) {
         localStorage.setItem('token', response.data.token);
+        updateUserData(response.data.user); 
         window.location.href = '/';
       } else {
         setError('Erro nas credenciais');
@@ -51,7 +43,7 @@ const Login = () => {
               id="email"
               placeholder="Email"
               value={email}
-              onChange={handleEmailChange}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <label htmlFor="password">Password:</label>
             <input
@@ -59,7 +51,7 @@ const Login = () => {
               id="password"
               placeholder="Senha"
               value={password}
-              onChange={handlePasswordChange}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
 
