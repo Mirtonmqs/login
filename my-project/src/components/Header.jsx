@@ -1,8 +1,7 @@
-// Header.jsx
-
 import React, { useState } from 'react';
-import '../styles/Site.css'; // Importe o arquivo de estilos para o header
+import '../styles/Site.css'; 
 import logo from '../img/logoaspec.png';
+import {UserContext} from '../contexts/UserContexts'
 
 const Header = ({ toggleSidebar }) => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -12,6 +11,9 @@ const Header = ({ toggleSidebar }) => {
     toggleSidebar(); // Chama a função passada como prop para abrir o sidebar
   };
 
+  const context = React.useContext(UserContext);
+
+
   return (
     <nav className="navbar">
       <div className="logo">
@@ -20,6 +22,7 @@ const Header = ({ toggleSidebar }) => {
         </a>
       </div>
       <div className="titulo">TEC</div>
+        {context.usuario} 
       {/* Elemento de login que chama a função handleToggleSidebar para abrir o Sidebar */}
       <button className="login-btn" onClick={handleToggleSidebar}>
         Menu

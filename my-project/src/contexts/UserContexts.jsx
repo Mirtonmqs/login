@@ -2,11 +2,9 @@ import React from "react";
  
 export const UserContext = React.createContext();
 
-const UserContext = () => {
+export const UserStorage = ({ children }) => {
     return (
-        <div>
-
-        </div>
-    )
-}
+    <UserContext.Provider value={{ usuario: 'Mirton' }}>{children}</UserContext.Provider>
+  );
+};
 
