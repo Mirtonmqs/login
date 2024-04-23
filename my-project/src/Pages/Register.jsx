@@ -35,8 +35,7 @@ const Register = () => {
     <div className="bg-light">
       <div className="register">
         <form className="register-form" onSubmit={handleRegister}>
-          <h1>Aspec</h1>
-          <h3>Registre-se</h3>
+          <div className='titulo'>Aspec</div>
           <div className="form">
             <label htmlFor="fullName">Nome completo:</label>
             <input
@@ -66,7 +65,7 @@ const Register = () => {
               onChange={handlePasswordChange}
             />
           </div>
-          <button type="submit">Registrar</button>
+          <button className='btn-registrar'>REGISTRAR</button>
         </form>
       </div>
     </div>

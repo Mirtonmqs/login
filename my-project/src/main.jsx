@@ -9,14 +9,14 @@ import { UserStorage } from './contexts/UserContexts';
 
 const App = () => (
   <BrowserRouter>
-  <UserStorage>
-    <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="/errorpage" element={<ErrorPage />} />
-      <Route path="/site" element={<Site />} />
-      <Route path="/registro" element={<Register />} />
-    </Routes>
-  </UserStorage>
+    <UserStorage>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/errorpage" element={<ErrorPage />} />
+        <Route path="/site" element={<Site />} />
+        <Route path="/registro" element={<Register />} />
+      </Routes>
+    </UserStorage>
   </BrowserRouter>
 );
 

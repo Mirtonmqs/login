@@ -21,10 +21,10 @@ const Header = ({ toggleSidebar }) => {
           <img src={logo} alt="Logo" />
         </a>
       </div>
-      <div className="titulo">TEC</div>
+      <div className="titulo-header">TEC</div>
         {context.usuario} 
       {/* Elemento de login que chama a função handleToggleSidebar para abrir o Sidebar */}
-      <button className="login-btn" onClick={handleToggleSidebar}>
+      <button className="menu-btn" onClick={handleToggleSidebar}>
         Menu
       </button>
 

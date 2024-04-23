@@ -35,7 +35,7 @@ const Login = () => {
     <div className="bg-light">
       <div className="login">
         <form className="login-form" onSubmit={handleLogin}>
-          <h1>Aspec</h1>
+          <div className='titulo'>Aspec</div>
           <div className='form'>
             <label htmlFor="email">Email:</label>
             <input
@@ -59,7 +59,7 @@ const Login = () => {
 
           {error && <p className="error-message">{error}</p>}
 
-          <div className='Inscrever'>
+          <div className='Inscrição'>
             <p>Não tem uma conta? <a href="http://localhost:5173/registro">Registre-se</a></p>
             <p>Esqueceu o <a href="">Email / Senha?</a></p>
           </div>
