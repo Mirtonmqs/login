@@ -6,7 +6,6 @@ const Site = () => {
   const [sidebarVisible, setSidebarVisible] = useState(false);
 
   const toggleSidebar = () => {
-    // Implemente a lógica para abrir ou fechar o sidebar aqui
     console.log('Abrir ou fechar sidebar');
   };
 

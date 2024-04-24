@@ -35,7 +35,9 @@ const Header = ({ toggleSidebar }) => {
               <button>Início</button>
             </li>
             <li>
+              <a href="http://localhost:5173/usuarios">
               <button>Usuários</button>
+              </a>
             </li>
             <li>
               <button>Sair</button>
