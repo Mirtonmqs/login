@@ -5,9 +5,9 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  
-  const api_url = '#######'; 
-  
+
+  const api_url = '#######';
+
   const handleLogin = async (e) => {
     e.preventDefault();
 
@@ -16,7 +16,7 @@ const Login = () => {
 
       if (response.data.success) {
         localStorage.setItem('token', response.data.token);
-        updateUserData(response.data.user); 
+        updateUserData(response.data.user);
         window.location.href = '/';
       } else {
         setError('Erro nas credenciais');
@@ -35,8 +35,8 @@ const Login = () => {
     <div className="bg-light">
       <div className="login">
         <form className="login-form" onSubmit={handleLogin}>
-          <div className='titulo'>Aspec</div>
-          <div className='form'>
+          <div className="titulo">Aspec</div>
+          <div className="form">
             <label htmlFor="email">Email:</label>
             <input
               type="text"
@@ -55,13 +55,20 @@ const Login = () => {
             />
           </div>
 
-          <button className='btn' type="submit">Login</button>
+          <button className="button-login" type="submit">
+            Login
+          </button>
 
           {error && <p className="error-message">{error}</p>}
 
-          <div className='Inscrição'>
-            <p>Não tem uma conta? <a href="http://localhost:5173/registro">Registre-se</a></p>
-            <p>Esqueceu o <a href="">Email / Senha?</a></p>
+          <div className="Inscrição">
+            <p>
+              Não tem uma conta?{' '}
+              <a href="http://localhost:5173/registro">Registre-se</a>
+            </p>
+            <p>
+              Esqueceu o <a href="">Email / Senha?</a>
+            </p>
           </div>
         </form>
       </div>

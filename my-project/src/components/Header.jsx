@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import '../styles/Site.css'; 
+import '../styles/Site.css';
 import logo from '../img/logoaspec.png';
-import {UserContext} from '../contexts/UserContexts'
+import { UserContext } from '../contexts/UserContexts';
 
 const Header = ({ toggleSidebar }) => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -13,7 +13,6 @@ const Header = ({ toggleSidebar }) => {
 
   const context = React.useContext(UserContext);
 
-
   return (
     <nav className="navbar">
       <div className="logo">
@@ -22,7 +21,7 @@ const Header = ({ toggleSidebar }) => {
         </a>
       </div>
       <div className="titulo-header">TEC</div>
-        {context.usuario} 
+      {context.usuario}
       {/* Elemento de login que chama a função handleToggleSidebar para abrir o Sidebar */}
       <button className="menu-btn" onClick={handleToggleSidebar}>
         Menu
