@@ -5,20 +5,18 @@ import ErrorPage from './Pages/ErrorPage';
 import Site from './Pages/Site';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
-import Usuarios from './Pages/usuarios';
 import { UserStorage } from './contexts/UserContexts';
 
 const App = () => (
   <BrowserRouter>
-    <UserStorage>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/errorpage" element={<ErrorPage />} />
-        <Route path="/site" element={<Site />} />
-        <Route path="/registro" element={<Register />} />
-        <Route path="/usuarios" element={<Usuarios />} />
-      </Routes>
-    </UserStorage>
+  <UserStorage>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/errorpage" element={<ErrorPage />} />
+      <Route path="/site" element={<Site />} />
+      <Route path="/registro" element={<Register />} />
+    </Routes>
+  </UserStorage>
   </BrowserRouter>
 );
 

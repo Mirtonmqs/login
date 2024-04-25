@@ -1,4 +1,4 @@
-/*login*/
+/* geral */
 .titulo {
   font-size: 40px;
   text-align: center;
@@ -17,6 +17,7 @@
   height: 100%;
 }
 
+/* formulario */
 .form {
   width: 100%;
   margin: 0 auto;
@@ -33,6 +34,7 @@
   font-size: 16px;
 }
 
+/*login*/
 label {
   display: none;
 }
@@ -162,7 +164,7 @@ label {
   justify-content: center;
   margin-top: 100px;
   background-color: #fff;
-  
+
 }
 
 .form-usuarios {
@@ -199,7 +201,7 @@ table th {
 }
 
 th.id {
-  width: 10px; 
+  width: 10px;
 }
 
 th.nome {
@@ -207,9 +209,9 @@ th.nome {
 }
 
 th.cpf {
-  width: 150px; 
+  width: 150px;
 }
 
 th.email {
-  width: 250px; 
+  width: 250px;
 }
