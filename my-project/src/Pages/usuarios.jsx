@@ -43,10 +43,10 @@ const ListagemPessoas = () => {
         <table border="1" cellPadding="8" cellSpacing="0">
           <thead className="table">
             <tr>
-              <th className='id'>ID</th>
-              <th className='nome'>Nome</th>
-              <th className='cpf'>CPF</th>
-              <th className='email'>Email</th>
+              <th className="id">ID</th>
+              <th className="nome">Nome</th>
+              <th className="cpf">CPF</th>
+              <th className="email">Email</th>
             </tr>
           </thead>
           <tbody>

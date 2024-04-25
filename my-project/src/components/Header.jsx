@@ -5,13 +5,12 @@ import { UserContext } from '../contexts/UserContexts';
 
 const Header = ({ toggleSidebar }) => {
   const [showSidebar, setShowSidebar] = useState(false);
+  const context = React.useContext(UserContext);
 
   const handleToggleSidebar = () => {
     setShowSidebar(!showSidebar);
-    toggleSidebar(); // Chama a função passada como prop para abrir o sidebar
+    toggleSidebar(); // Chama a função passada para abrir o sidebar
   };
-
-  const context = React.useContext(UserContext);
 
   return (
     <nav className="navbar">
@@ -36,7 +35,7 @@ const Header = ({ toggleSidebar }) => {
             </li>
             <li>
               <a href="http://localhost:5173/usuarios">
-              <button>Usuários</button>
+                <button>Usuários</button>
               </a>
             </li>
             <li>
