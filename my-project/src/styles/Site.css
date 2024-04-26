@@ -182,7 +182,7 @@ label {
   border-radius: 8px;
   width: 80%;
   height: 200px;
-  border: 4px solid #ccc;
+
 }
 
 .titulo-usuarios {
@@ -206,7 +206,7 @@ table td {
 }
 
 table th {
-  background-color: #6c63fe;
+  background-color:;
 }
 
 th.id {
@@ -223,4 +223,9 @@ th.cpf {
 
 th.email {
   width: 250px;
+}
+
+
+table tbody tr:nth-child(even) {
+  background-color:#f0ebeb;
 }

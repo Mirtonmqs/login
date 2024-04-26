@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Site.css';
+import '@/styles/Site.css';
 
 const Pessoa = ({ id, nome, cpf, email }) => {
   return (
