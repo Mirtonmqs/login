@@ -5,22 +5,23 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const api_url = '#######';
+  const api_url = 'http://localhost:3000/api/login';
+  const [user, setUser] = useState(null);
 
   const handleLogin = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(api_url, { email, password });
+      const response = await axios.post('http://localhost:3000/api/login', { email, password });
 
       if (response.data.success) {
         localStorage.setItem('token', response.data.token);
         updateUserData(response.data.user);
-        window.location.href = '/';
+        window.location.href = '/registro';
       } else {
         setError('Erro nas credenciais');
         setEmail('');
-        setPassword('');
+        setPassword(''); 
       }
     } catch (error) {
       console.error('Erro ao fazer a solicitação:', error);
@@ -28,6 +29,11 @@ const Login = () => {
       setEmail('');
       setPassword('');
     }
+  };
+
+  const updateUserData = (userData) => {
+    // Atualiza o estado 'user' com os dados do usuário recebidos do backend
+    setUser(userData);
   };
 
   return (
