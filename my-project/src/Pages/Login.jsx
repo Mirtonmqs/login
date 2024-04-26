@@ -5,14 +5,14 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const api_url = 'http://localhost:3000/api/login';
-  const [user, setUser] = useState(null);
+  const api_url = 'http://localhost:3000';
+  const [setUser] = useState(null);
 
   const handleLogin = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3000/api/login', { email, password });
+      const response = await axios.post(api_url, { email, password });
 
       if (response.data.success) {
         localStorage.setItem('token', response.data.token);
@@ -43,7 +43,7 @@ const Login = () => {
           <div className="titulo">Aspec</div>
           <div className="form">
             <label htmlFor="email">Email:</label>
-            <input
+            <input className='campo-email'
               type="text"
               id="email"
               placeholder="Email"
@@ -51,7 +51,7 @@ const Login = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
             <label htmlFor="password">Password:</label>
-            <input
+            <input className='campo-senha'
               type="password"
               id="password"
               placeholder="Senha"
@@ -66,7 +66,7 @@ const Login = () => {
 
           {error && <p className="error-message">{error}</p>}
 
-          <div className="Inscrição">
+          <div className="inscricao">
             <p>
               Não tem uma conta?{' '}
               <a href="http://localhost:5173/registro">Registre-se</a>

@@ -25,7 +25,16 @@
   position: relative;
 }
 
-.form input {
+.campo-email {
+  width: 80%;
+  padding: 20px;
+  margin: 0 0 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.campo-senha {
   width: 80%;
   padding: 20px;
   margin: 0 0 20px 0;
@@ -62,7 +71,7 @@ label {
   font-style: normal;
 }
 
-.Inscrição {
+.inscricao {
   text-align: center;
   font-size: 18px;
 }

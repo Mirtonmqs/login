@@ -7,12 +7,17 @@ module.exports = {
     filename: 'bundle.js', // Nome do arquivo de saída
     publicPath: '/' // Caminho público usado pelo servidor web para servir os arquivos
   },
-  resolve: {
-    alias: {
-      '@pages': path.resolve(__dirname, 'src/Pages/'),
-      '@contexts': path.resolve(__dirname, 'src/contexts/')
-    }
-  },
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "@/": "./src"
+        }
+      }
+    ]
+  ],
   module: {
     rules: [
       {
