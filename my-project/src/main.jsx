@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ErrorPage from './Pages/ErrorPage';
+import ErrorPage from '@/Pages/ErrorPage';
 import Site from '@/Pages/Site';
 import Login from '@/Pages/Login';
 import Register from '@/Pages/Register';
