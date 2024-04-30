@@ -173,7 +173,6 @@ label {
   justify-content: center;
   margin-top: 100px;
   background-color: #fff;
-
 }
 
 .form-usuarios {
@@ -182,14 +181,12 @@ label {
   border-radius: 8px;
   width: 80%;
   height: 200px;
-
 }
 
 .titulo-usuarios {
   font-size: 25px;
   margin-bottom: 20px;
   text-align: center;
-
 }
 
 table {
@@ -206,7 +203,7 @@ table td {
 }
 
 table th {
-  background-color:;
+  background-color: cornflowerblue;
 }
 
 th.id {
@@ -227,5 +224,5 @@ th.email {
 
 
 table tbody tr:nth-child(even) {
-  background-color:#f0ebeb;
+  background-color: #d3d3d3;
 }
