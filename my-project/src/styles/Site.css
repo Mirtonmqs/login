@@ -24,6 +24,14 @@
   padding: 30px;
   position: relative;
 }
+.form input {
+  width: 80%;
+  padding: 20px;
+  margin: 0 0 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
 
 .campo-email {
   width: 80%;
@@ -173,6 +181,7 @@ label {
   justify-content: center;
   margin-top: 100px;
   background-color: #fff;
+
 }
 
 .form-usuarios {

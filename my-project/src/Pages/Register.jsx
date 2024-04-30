@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/Site.css';
+import '@/styles/Site.css';
 
 const Register = () => {
   const [fullName, setFullName] = useState('');

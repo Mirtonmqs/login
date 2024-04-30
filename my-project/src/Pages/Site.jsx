@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../styles/Site.css';
-import Header from '../components/Header';
+import '@/styles/Site.css';
+import Header from '@/components/Header';
 
 const Site = () => {
   const [sidebarVisible, setSidebarVisible] = useState(false);
