@@ -125,16 +125,50 @@ label {
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
-  height: 70px;
+  height: 50px;
   width: 100%;
   position: fixed;
+  padding: 10px 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-icon {
+  font-size: 30px;
 }
 
 .toggle-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  left: 20px;
   position: fixed;
   top: 10px;
-  left: 10px;
   z-index: 2;
+}
+
+.form-site {
+  flex: 1;
+  display: flex; 
+}
+
+.form-site input[type="text"] {
+  background-color:#F3F6FB;
+  width: 200px; 
+  padding: 8px; 
+  border: none;
+  font-size: 16px; 
+  margin-right: 900px;
+}
+.icon {
+  font-size: 20px;
 }
 
 .sidebar {
@@ -174,32 +208,6 @@ label {
   border-bottom: 1px solid #555;
 }
 
-.form-site {
-  margin-right: 20px;
-}
-
-.toggle-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  top: 20px;
-  left: 20px;
-}
-
-.menu-icon {
-  font-size: 24px;
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-
 /* usuarios */
 .bg-usuarios {
   height: 100vh;
@@ -207,7 +215,6 @@ label {
   justify-content: center;
   margin-top: 100px;
   background-color: #fff;
-
 }
 
 .form-usuarios {
@@ -257,7 +264,9 @@ th.email {
   width: 250px;
 }
 
-
 table tbody tr:nth-child(even) {
   background-color: #d3d3d3;
 }
+
+
+

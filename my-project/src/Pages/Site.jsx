@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import '@/styles/Site.css';
+import { FiSearch } from 'react-icons/fi';
 
 const Site = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -16,34 +16,31 @@ const Site = () => {
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
-    // Aqui você pode adicionar a lógica para lidar com a pesquisa
     console.log('Pesquisar:', searchQuery);
   };
 
   return (
     <div className={`bg-site ${sidebarOpen ? 'sidebar-open' : ''}`}>
-      {/* Botão do menu */}
-      <button className='toggle-btn' onClick={toggleSidebar}>
-        <span className='menu-icon'>&#9776;</span>
+      <button className="toggle-btn" onClick={toggleSidebar}>
+        <span className="menu-icon">&#9776;</span>
       </button>
 
-      {/* Navbar */}
-      <nav className='navbar'>
+      <nav className="navbar">
         <div className="container">
-          <input
-            type="text"
-            placeholder="Search"
-            value={searchQuery}
-            onChange={handleSearchChange}
-          />
-          <button type="submit">Search</button>
-          {/* Formulário de pesquisa */}
-          <form className="search-form" onSubmit={handleSearchSubmit}>
+          <form className="form-site" onSubmit={handleSearchSubmit}>
+            <input
+              type="text"
+              placeholder="Search projects..."
+              value={searchQuery}
+              onChange={handleSearchChange}
+            />
           </form>
+          <div className="icon">
+            <FiSearch />
+          </div>
         </div>
       </nav>
 
-      {/* Sidebar */}
       <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
         <ul>
           <li>Início</li>
