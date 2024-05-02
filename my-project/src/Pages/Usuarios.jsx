@@ -37,16 +37,16 @@ const ListagemPessoas = () => {
   ];
 
   return (
-    <div className="bg-usuarios">
-      <div className="form-usuarios">
-        <div className="titulo-usuarios">LISTAGEM DE USUÁRIOS</div>
-        <table border="1" cellPadding="8" cellSpacing="0">
-          <thead className="table">
+    <div className='bg-usuarios'>
+      <div className='form-usuarios'>
+        <div className='titulo-usuarios'>LISTAGEM DE USUÁRIOS</div>
+        <table border='1' cellPadding='8' cellSpacing='0'>
+          <thead className='table'>
             <tr>
-              <th className="id">ID</th>
-              <th className="nome">Nome</th>
-              <th className="cpf">CPF</th>
-              <th className="email">Email</th>
+              <th className='id'>ID</th>
+              <th className='nome'>Nome</th>
+              <th className='cpf'>CPF</th>
+              <th className='email'>Email</th>
             </tr>
           </thead>
           <tbody>

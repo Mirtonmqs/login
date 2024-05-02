@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 const ErrorPage = () => {
   return (
-    <div className="">
+    <div className=''>
       <h1> Algo de errado aconteceu!</h1>
     </div>
   );
