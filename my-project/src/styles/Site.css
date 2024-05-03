@@ -124,11 +124,12 @@ label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
-  height: 50px;
+  height: 5%;
   width: 100%;
-  position: fixed;
+  position: relative;
   padding: 10px 20px;
+  left: 180%;
+  top: -40px
 }
 
 .container {
@@ -148,7 +149,7 @@ label {
   border: none;
   cursor: pointer;
   padding: 10px;
-  left: 20px;
+  left: 230px;
   position: fixed;
   top: 10px;
   z-index: 2;
@@ -156,25 +157,28 @@ label {
 
 .form-site {
   flex: 1;
-  display: flex; 
+  display: flex;
 }
 
 .form-site input[type="text"] {
-  background-color:#F3F6FB;
-  width: 200px; 
-  padding: 8px; 
+  background-color: #F3F6FB;
+  width: 200px;
+  padding: 15px 10px 15px 10px;
+  border-radius: 10px; 
   border: none;
-  font-size: 16px; 
-  margin-right: 900px;
+  font-size: 16px;
+  margin-right: 10px;
 }
-.icon {
+
+.icon-lupa {
   font-size: 20px;
+  margin-top: 9px;
 }
 
 .sidebar {
   width: 200px;
   height: 100vh;
-  background-color: #333;
+  background-color: #293042;
   position: fixed;
   padding-top: 50px;
   top: 0;
@@ -195,17 +199,18 @@ label {
 
 .sidebar.open {
   transform: translateX(0);
+  width: 300px;
 }
 
 .sidebar ul {
   margin-top: 20px;
   list-style-type: none;
   padding: 0;
+  font-size: 25px;
 }
 
 .sidebar ul li {
   padding: 10px;
-  border-bottom: 1px solid #555;
 }
 
 /* usuarios */
@@ -268,5 +273,6 @@ table tbody tr:nth-child(even) {
   background-color: #d3d3d3;
 }
 
-
-
+.open .menu-icon {
+  margin-left: 80px;
+}
