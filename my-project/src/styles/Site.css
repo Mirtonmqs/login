@@ -136,7 +136,7 @@ label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -158,21 +158,26 @@ label {
 .form-site {
   flex: 1;
   display: flex;
+  margin-left: -150px;
+  margin-top: -70px;
 }
 
 .form-site input[type="text"] {
   background-color: #F3F6FB;
-  width: 200px;
-  padding: 15px 10px 15px 10px;
+  width: 180px;
+  padding: 15px 20px 15px 10px;
   border-radius: 10px; 
   border: none;
   font-size: 16px;
-  margin-right: 10px;
 }
 
 .icon-lupa {
   font-size: 20px;
   margin-top: 9px;
+}
+.btn-lupa {
+  border: none;
+  background-color:#F3F6FB;
 }
 
 .sidebar {
@@ -185,6 +190,14 @@ label {
   bottom: 0;
   transition: transform 0.3s ease;
   transform: translateX(-100%);
+}
+
+.logo {
+  width: auto;
+  height: 50px; 
+  margin: 10px; 
+  margin-top: -30px;
+
 }
 
 .sidebar li {
@@ -207,6 +220,7 @@ label {
   list-style-type: none;
   padding: 0;
   font-size: 25px;
+  margin-top: -50px;
 }
 
 .sidebar ul li {
