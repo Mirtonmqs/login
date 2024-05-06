@@ -42,7 +42,7 @@ const Site = () => {
                 value={searchQuery}
                 onChange={handleSearchChange}
               />
-              <div className="icon-lupa">
+              <div className="icons">
                 <button className='btn-lupa'>
                   <FiSearch />
                 </button>
