@@ -110,6 +110,68 @@ label {
   font-style: normal;
 }
 
+
+
+/* usuarios */
+.bg-usuarios {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  background-color: #fff;
+}
+
+.form-usuarios {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  height: 200px;
+}
+
+.titulo-usuarios {
+  font-size: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+table {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  border: 1px solid;
+  padding: 12px;
+  text-align: center;
+}
+
+table th {
+  background-color: cornflowerblue;
+}
+
+th.id {
+  width: 10px;
+}
+
+th.nome {
+  width: 200px;
+}
+
+th.cpf {
+  width: 150px;
+}
+
+th.email {
+  width: 250px;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #d3d3d3;
+}
+
 /* site*/
 /* .bg-site {
   position: fixed;
@@ -247,79 +309,11 @@ label {
 } */
 
 
-/* usuarios */
-.bg-usuarios {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
-  background-color: #fff;
-}
-
-.form-usuarios {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  width: 80%;
-  height: 200px;
-}
-
-.titulo-usuarios {
-  font-size: 25px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-table {
-  margin-top: 20px;
-  width: 100%;
-  border-collapse: collapse;
-}
-
-table th,
-table td {
-  border: 1px solid;
-  padding: 12px;
-  text-align: center;
-}
-
-table th {
-  background-color: cornflowerblue;
-}
-
-th.id {
-  width: 10px;
-}
-
-th.nome {
-  width: 200px;
-}
-
-th.cpf {
-  width: 150px;
-}
-
-th.email {
-  width: 250px;
-}
-
-table tbody tr:nth-child(even) {
-  background-color: #d3d3d3;
-}
-
-
-
-
-
-
-
-
-
-/* Estilos para o cabeçalho */
-
+/* site2 */
 main {
   margin-left: 192px; 
   padding: 20px;
+  color: aqua;
 }
 .main-content {
   margin-left: 500px;
@@ -341,11 +335,20 @@ main {
   z-index: 2;
 }
 
+.cabecalho {
+  margin-top: -160px;
+  margin-left: -12px;
+  width: 2132px;
+  height: 100px;
+  background-color: #6c63fe;
+  color: #fff;
+}
+
 .form-site {
   flex: 1;
   display: flex;
   margin-left: 100px;
-  margin-top: -60px;
+  margin-top: -40px;
 }
 
 .form-site input[type="text"] {
@@ -355,12 +358,12 @@ main {
   border-radius: 10px;
   border: none;
   font-size: 16px;
+  margin-top: 20px;
 }
 
 .icons {
   font-size: 25px;
   display: flex;
-  margin-left: auto;
 }
 
 .btn-lupa {
@@ -369,6 +372,8 @@ main {
   border: none;
   background-color: #F3F6FB;
   margin-right: 1200px;
+  width: 20px;
+  height: 20px;;
 }
 
 .icon-msg {
@@ -416,12 +421,4 @@ main {
   background-color: #6c63fe;
   color: #fff;
   
-}
-.cabecalho {
-  margin-top: -70px;
-  margin-left: -12px;
-  width: 2080px;
-  height: 100px;
-  background-color: #6c63fe;
-  color: #fff;
 }

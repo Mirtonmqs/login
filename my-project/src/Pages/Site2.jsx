@@ -42,8 +42,9 @@ const Site2 = () => {
             </ul>
           </aside>
 
-          <main>
-          <form className="form-site" onSubmit={handleSearchSubmit}>
+    <main>
+            <nav className='cabecalho'>
+            <form className="form-site" onSubmit={handleSearchSubmit}>
               <input
                 type="text"
                 placeholder="Search projects..."
@@ -62,17 +63,16 @@ const Site2 = () => {
                 </button>
               </div>
             </form>
-            <header className='cabecalho'>
               <button className="toggle-btn" onClick={toggleSidebar}>
                 <span className="menu-icon">&#9776;</span>
               </button>
-            </header>
+            </nav>
+          </main>
 
             <div className="main-content">
               <h2>Conteúdo Principal</h2>
              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, nobis iste excepturi a porro velit perferendis, necessitatibus placeat, molestiae eos quis qui autem recusandae voluptate sit voluptatem illum incidunt. Quos?</p>
             </div>
-          </main>
 
         </div>
       </div>
