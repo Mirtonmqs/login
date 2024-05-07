@@ -111,7 +111,7 @@ label {
 }
 
 /* site*/
-.bg-site {
+/* .bg-site {
   position: fixed;
   top: 0;
   left: 0;
@@ -227,7 +227,7 @@ label {
 
 .sidebar.open {
   transform: translateX(0);
-  width: 300px;
+  width: 10%;
 }
 
 .sidebar ul {
@@ -244,7 +244,7 @@ label {
 
 .open .menu-icon {
   margin-left: 80px;
-}
+} */
 
 
 /* usuarios */
@@ -307,79 +307,121 @@ table tbody tr:nth-child(even) {
   background-color: #d3d3d3;
 }
 
+
+
+
+
+
+
+
+
 /* Estilos para o cabeçalho */
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  z-index: 2; /* Para garantir que o header fique acima do sidebar */
-}
 
-.logo {
-  width: 100px; /* Ajuste o tamanho conforme necessário */
-}
-
-.search-container {
-  margin: 0 20px;
-}
-
-.search-container form {
-  display: flex;
-}
-
-.search-container input[type="text"] {
-  width: 200px; /* Ajuste o tamanho conforme necessário */
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.search-container button {
-  padding: 5px 10px;
-  background-color: #555;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.icons-container {
-  display: flex;
-}
-
-.icons-container svg {
-  width: 30px; /* Ajuste o tamanho conforme necessário */
-  height: 30px; /* Ajuste o tamanho conforme necessário */
-  margin-left: 10px;
-}
-
-/* Estilos para a barra lateral */
-.sidebar2 {
-  width: 200px;
-  background-color: #f4f4f4;
-  height: 100vh;
-  position: fixed; /* Fixa a barra lateral */
-  top: 0; /* Alinha a barra lateral com o topo */
-  left: 0; /* Alinha a barra lateral com a esquerda */
-  z-index: 1; /* Para garantir que o sidebar fique abaixo do header */
-}
-
-.sidebar2 ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar2 ul li {
-  padding: 10px;
-}
-
-.sidebar2 ul li a {
-  text-decoration: none;
-  color: #333;
-}
-
-/* Estilos para o corpo principal */
 main {
-  margin-left: 200px; /* Ajusta a margem à esquerda para acomodar o sidebar */
+  margin-left: 192px; 
   padding: 20px;
+}
+.main-content {
+  margin-left: 500px;
+  font-size: 20px;
+}
+
+.menu-icon {
+  font-size: 30px;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  left: 230px;
+  position: fixed;
+  top: 10px;
+  z-index: 2;
+}
+
+.form-site {
+  flex: 1;
+  display: flex;
+  margin-left: 100px;
+  margin-top: -60px;
+}
+
+.form-site input[type="text"] {
+  background-color: #F3F6FB;
+  width: 180px;
+  padding: 15px 20px 15px 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+}
+
+.icons {
+  font-size: 25px;
+  display: flex;
+  margin-left: auto;
+}
+
+.btn-lupa {
+  color: #555;
+  font-size: 20px;
+  border: none;
+  background-color: #F3F6FB;
+  margin-right: 1200px;
+}
+
+.icon-msg {
+  font-size: 20px;
+  border: none;
+  background-color: #F3F6FB;
+  margin-right: 10px;
+}
+
+.icon-sino {
+  font-size: 20px;
+  border: none;
+  background-color: #F3F6FB;
+}
+
+
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: #293042;
+  position: fixed;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+  z-index: 1; 
+}
+
+.sidebar.open {
+  transform: translateX(0);
+  width: 300px;
+}
+
+.open .menu-icon {
+  margin-left: 100px;
+} 
+
+.open .cabecalho{
+  margin-top: -70px;
+  margin-left: 90px;
+  width: 2080px;
+  height: 100px;
+  background-color: #6c63fe;
+  color: #fff;
+  
+}
+.cabecalho {
+  margin-top: -70px;
+  margin-left: -12px;
+  width: 2080px;
+  height: 100px;
+  background-color: #6c63fe;
+  color: #fff;
 }
