@@ -26,15 +26,47 @@ const Site2 = () => {
 
   return (
     <>
-      <div className="bg-site">
-        <nav className="sidebar">
-          <a className="logo" href=""></a>
-        </nav>
-        <div className="main">
-          <nav className="navbar-bg"></nav>
-          <div className="content"></div>
+      <header>
+        <div className="logo-container">
+          <img src={logo} alt="Logo" className="logo" />
         </div>
-      </div>
+        <div className="search-container">
+          <form onSubmit={handleSearchSubmit}>
+            <input
+              type="text"
+              placeholder="Buscar..."
+              value={searchQuery}
+              onChange={handleSearchChange}
+            />
+            <button type="submit">
+              <FiSearch />
+            </button>
+          </form>
+        </div>
+        <div className="icons-container">
+          <IoChatboxOutline />
+          <IoNotificationsOffOutline />
+        </div>
+        <div className="header-content">
+          <h2>Bem-vindo ao Meu Site</h2>
+          <p>Este é um exemplo de conteúdo no cabeçalho.</p>
+        </div>
+      </header>
+
+      <aside class="sidebar2">
+        <ul>
+          <li><a href="#">Página 1</a></li>
+          <li><a href="#">Página 2</a></li>
+          <li><a href="#">Página 3</a></li>
+        </ul>
+      </aside>
+
+      <main>
+        <div className="main-content">
+          <h2>Conteúdo Principal</h2>
+          <p>Este é um exemplo de conteúdo no corpo do site.</p>
+        </div>
+      </main>
     </>
   );
 };
