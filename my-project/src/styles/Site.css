@@ -156,8 +156,8 @@ label {
 .form-site {
   flex: 1;
   display: flex;
-  margin-left: -150px;
-  margin-top: -100px;
+  margin-left: -180px;
+  margin-top: -60px;
 }
 
 .form-site input[type="text"] {
@@ -210,10 +210,9 @@ label {
 
 .logo {
   width: auto;
-  height: 50px;
-  margin: 10px;
-  margin-top: -30px;
-
+  height: 40px;
+  margin-left: 20px;
+  margin-top: -50px;
 }
 
 .sidebar li {
@@ -236,7 +235,7 @@ label {
   list-style-type: none;
   padding: 0;
   font-size: 25px;
-  margin-top: -40px;
+  margin-top: -30px;
 }
 
 .sidebar ul li {
@@ -246,6 +245,7 @@ label {
 .open .menu-icon {
   margin-left: 80px;
 }
+
 
 /* usuarios */
 .bg-usuarios {
