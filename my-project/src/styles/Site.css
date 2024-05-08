@@ -9,62 +9,6 @@
 }
 
 .bg-light {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #e5e2ff;
-  width: 100%;
-  height: 100%;
-}
-
-/* formulario */
-.form {
-  width: 100%;
-  margin: 0 auto;
-  padding: 30px;
-  position: relative;
-}
-
-.form input {
-  width: 80%;
-  padding: 20px;
-  margin: 0 0 20px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-.campo-email {
-  width: 80%;
-  padding: 20px;
-  margin: 0 0 20px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-.campo-senha {
-  width: 80%;
-  padding: 20px;
-  margin: 0 0 20px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-/*login*/
-label {
-  display: none;
-}
-
-.login {
-  position: absolute;
-  background-color: #fff;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 500px;
   height: 550px;
   margin: auto;
 }
@@ -171,6 +115,107 @@ th.email {
 table tbody tr:nth-child(even) {
   background-color: #d3d3d3;
 }
+
+/* site2 */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+.sidebar2 {
+  width: 200px;
+  background-color: #f0f0f0;
+  height: 100vh; /* Alteração da altura para 100vh */
+  
+}
+
+.cabecalho {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 50px;
+  background-color: #28bccf;
+}
+
+.body {
+  flex-grow: 1;
+  background-color: #88c21c;
+}
+
+/* Garante que todos os elementos dentro do body ocupem toda a largura */
+.body {
+  width: 100%;
+}
+
+.form-site {
+  display: flex;
+margin-left: 250px;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  left: 230px;
+  position: fixed;
+  top: 10px;
+  z-index: 2;
+  font-size: 20px;
+}
+
+.form-site input[type="text"] {
+  background-color: #F3F6FB;
+  width: 180px;
+  height: 1px;
+  padding: 15px 20px 15px 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: -180px;
+}
+
+.icons {
+  display: flex;
+}
+
+.btn-lupa {
+  color: #555;
+  font-size: 15px;
+  border: none;
+  background-color: #F3F6FB;
+  margin-right: 600px;
+ 
+}
+
+.icon-msg {
+  color: #555;
+  font-size: 15px;
+  border: none;
+  background-color: #F3F6FB;
+
+}
+
+.icon-sino {
+  color: #555;
+  font-size: 15px;
+  border: none;
+  background-color: #F3F6FB;
+}
+
+
+
+
+
 
 /* site*/
 /* .bg-site {
@@ -307,118 +352,3 @@ table tbody tr:nth-child(even) {
 .open .menu-icon {
   margin-left: 80px;
 } */
-
-
-/* site2 */
-main {
-  margin-left: 192px; 
-  padding: 20px;
-  color: aqua;
-}
-.main-content {
-  margin-left: 500px;
-  font-size: 20px;
-}
-
-.menu-icon {
-  font-size: 30px;
-}
-
-.toggle-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  left: 230px;
-  position: fixed;
-  top: 10px;
-  z-index: 2;
-}
-
-.cabecalho {
-  margin-top: -160px;
-  margin-left: -12px;
-  width: 2132px;
-  height: 100px;
-  background-color: #6c63fe;
-  color: #fff;
-}
-
-.form-site {
-  flex: 1;
-  display: flex;
-  margin-left: 100px;
-  margin-top: -40px;
-}
-
-.form-site input[type="text"] {
-  background-color: #F3F6FB;
-  width: 180px;
-  padding: 15px 20px 15px 10px;
-  border-radius: 10px;
-  border: none;
-  font-size: 16px;
-  margin-top: 20px;
-}
-
-.icons {
-  font-size: 25px;
-  display: flex;
-}
-
-.btn-lupa {
-  color: #555;
-  font-size: 20px;
-  border: none;
-  background-color: #F3F6FB;
-  margin-right: 1200px;
-  width: 20px;
-  height: 20px;;
-}
-
-.icon-msg {
-  font-size: 20px;
-  border: none;
-  background-color: #F3F6FB;
-  margin-right: 10px;
-}
-
-.icon-sino {
-  font-size: 20px;
-  border: none;
-  background-color: #F3F6FB;
-}
-
-
-.sidebar {
-  width: 200px;
-  height: 100vh;
-  background-color: #293042;
-  position: fixed;
-  padding-top: 50px;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  transition: transform 0.3s ease;
-  transform: translateX(-100%);
-  z-index: 1; 
-}
-
-.sidebar.open {
-  transform: translateX(0);
-  width: 300px;
-}
-
-.open .menu-icon {
-  margin-left: 100px;
-} 
-
-.open .cabecalho{
-  margin-top: -70px;
-  margin-left: 90px;
-  width: 2080px;
-  height: 100px;
-  background-color: #6c63fe;
-  color: #fff;
-  
-}
