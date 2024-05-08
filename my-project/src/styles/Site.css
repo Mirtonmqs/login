@@ -311,18 +311,17 @@ table tbody tr:nth-child(even) {
 
 /* site2 */
 main {
-  margin-left: 192px; 
-  padding: 20px;
   color: aqua;
+  width: 100%;
 }
-.main-content {
+/* .main-content {
   margin-left: 500px;
   font-size: 20px;
-}
+} */
 
-.menu-icon {
+/* .menu-icon {
   font-size: 30px;
-}
+} */
 
 .toggle-btn {
   background: transparent;
@@ -335,23 +334,16 @@ main {
   z-index: 2;
 }
 
-.cabecalho {
-  margin-top: -160px;
-  margin-left: -12px;
-  width: 2132px;
-  height: 100px;
-  background-color: #6c63fe;
-  color: #fff;
-}
 
-.form-site {
+
+/* .form-site {
   flex: 1;
   display: flex;
   margin-left: 100px;
   margin-top: -40px;
-}
+} */
 
-.form-site input[type="text"] {
+/* .form-site input[type="text"] {
   background-color: #F3F6FB;
   width: 180px;
   padding: 15px 20px 15px 10px;
@@ -359,35 +351,12 @@ main {
   border: none;
   font-size: 16px;
   margin-top: 20px;
-}
+} */
 
-.icons {
-  font-size: 25px;
-  display: flex;
-}
 
-.btn-lupa {
-  color: #555;
-  font-size: 20px;
-  border: none;
-  background-color: #F3F6FB;
-  margin-right: 1200px;
-  width: 20px;
-  height: 20px;;
-}
 
-.icon-msg {
-  font-size: 20px;
-  border: none;
-  background-color: #F3F6FB;
-  margin-right: 10px;
-}
 
-.icon-sino {
-  font-size: 20px;
-  border: none;
-  background-color: #F3F6FB;
-}
+
 
 
 .sidebar {
@@ -421,4 +390,15 @@ main {
   background-color: #6c63fe;
   color: #fff;
   
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body {
+  background-color: brown;
+}
+.open main{
+  width: 100%;
 }
