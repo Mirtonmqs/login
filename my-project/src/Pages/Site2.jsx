@@ -13,6 +13,7 @@ const Site2 = () => {
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
+    console.log('teste')
   };
 
   const handleSearchChange = (event) => {
@@ -26,24 +27,28 @@ const Site2 = () => {
 
   return (
     <>
-      <div className="bg-site2">
-        <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
-          <aside class="list-sidebar">
+      <div className={`${sidebarOpen ? 'open' : 'close'}`}>
+        <div class="container">
+          <div class="sidebar">
+            <div className="">
+              <a href="#">
+                <img className="logo" src={logo} alt="Logo" />
+              </a>
+            </div>
             <ul>
-              <li>
-                <a href="#">Página 1</a>
-              </li>
-              <li>
-                <a href="#">Página 2</a>
-              </li>
-              <li>
-                <a href="#">Página 3</a>
-              </li>
+              <li>Início</li>
+              <li>Usuários</li>
+              <li>Sair</li>
             </ul>
-          </aside>
+          </div>
 
-          <main>
-            <nav className="cabecalho">
+          <div class="bg-site">
+            <div class="navbar">
+              <div className="btn-menu">
+                <button className="toggle-btn" onClick={toggleSidebar}>
+                  <span className="menu-icon">&#9776;</span>
+                </button>
+              </div>
               <form className="form-site" onSubmit={handleSearchSubmit}>
                 <input
                   type="text"
@@ -63,21 +68,11 @@ const Site2 = () => {
                   </button>
                 </div>
               </form>
-              <button className="toggle-btn" onClick={toggleSidebar}>
-                <span className="menu-icon">&#9776;</span>
-              </button>
-            </nav>
-            <div className="main-content">
-              <h2>Conteúdo Principal</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laudantium, nobis iste excepturi a porro velit perferendis,
-                necessitatibus placeat, molestiae eos quis qui autem recusandae
-                voluptate sit voluptatem illum incidunt. Quos?
-              </p>
             </div>
-          </main>
-
+            <div className="corpo">
+              <h1>oi</h1>
+            </div>
+          </div>
         </div>
       </div>
     </>
