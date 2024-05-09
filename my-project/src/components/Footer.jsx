@@ -1,10 +1,10 @@
 import React from 'react';
-import '../styles/Footer.css';
+import '@/styles/Footer.css';
 
 function Footer() {
   return (
     <>
-      <footer className="footer">
+      <footer className='footer'>
         <p>&copy; 2024 Aspec. Todos os direitos reservados.</p>
       </footer>
     </>
