@@ -187,7 +187,7 @@ table tbody tr:nth-child(even) {
   background-color: #d3d3d3;
 }
 
-/* site2 */
+/* site*/
 html,
 body {
   height: 100%;
@@ -203,7 +203,11 @@ body {
   width: 300px;
   background-color: #293042;
   height: 100vh;
-  transition: left 0.3s ease;
+  transition: width 0.3s ease;
+}
+
+.topo-sidebar {
+  display: inline;
 }
 
 .logo {
@@ -211,6 +215,10 @@ body {
   height: 45px;
   margin-left: 25px;
   margin-top: 10px;
+}
+
+h1 {
+  margin: 0;
 }
 
 ul {
@@ -251,12 +259,33 @@ li {
   margin-left: 10px;
 }
 
+.buttons {
+  margin-top: 40px;
+}
+
+.buttons button {
+  color: #fff;
+  display: block;
+  margin: 20px 0px 0px 25px;
+  font-size: 25px;
+  background-color: transparent;
+  border: none;
+}
+
+.buttons button a {
+  color: #fff;
+  text-decoration: none; 
+}
+
 .corpo {
   flex-grow: 1;
-  background-color: #555;
+  background-color: #ccc;
   width: 100%;
 }
 
+.text1 {
+  margin: 10px;
+}
 
 .form-site {
   display: flex;
@@ -317,7 +346,7 @@ li {
 
 .close .sidebar {
   width: 0px;
-  transition: left 0.3s ease;
+  transition: width 0.3s ease;
 }
 
 .close .toggle-btn {
