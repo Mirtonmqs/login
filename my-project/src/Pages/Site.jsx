@@ -37,13 +37,13 @@ const Site2 = () => {
             </div>
             <div class="buttons">
               <button>
-                <a href="link_para_inicio">Início</a>
+                <a href="">Início</a>
               </button>
               <button>
-                <a href="link_para_usuarios">Usuários</a>
+                <a href="">Usuários</a>
               </button>
               <button>
-                <a href="link_para_sair">Sair</a>
+                <a href="">Sair</a>
               </button>
             </div>
           </div>
@@ -76,13 +76,14 @@ const Site2 = () => {
               </form>
             </div>
             <div className="corpo">
+                <h1 className='titulo-site'>Tables</h1>
               <div className="text1">
-                <h3>
+                <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. A
                   inventore maxime voluptatem assumenda, officiis ex corporis
                   sint cupiditate praesentium quis distinctio dicta possimus cum
                   laboriosam nulla, nisi deleniti. Corrupti, nisi?
-                </h3>
+                </p>
               </div>
             </div>
           </div>
