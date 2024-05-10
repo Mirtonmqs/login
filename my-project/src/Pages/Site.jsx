@@ -32,7 +32,7 @@ const Site2 = () => {
           <div class="sidebar">
             <div className="topo-sidebar">
               <a href="#">
-                <img className="logo" src={logo} alt="Logo" /> 
+                <img className="logo" src={logo} alt="Logo" />
               </a>
             </div>
             <div class="buttons">

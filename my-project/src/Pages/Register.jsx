@@ -32,40 +32,40 @@ const Register = () => {
   };
 
   return (
-    <div className='bg-light'>
-      <div className='register'>
-        <form className='register-form' onSubmit={handleRegister}>
-          <div className='titulo'>Aspec</div>
-          <div className='form'>
-            <label htmlFor='fullName'>Nome completo:</label>
+    <div className="bg-light">
+      <div className="register">
+        <form className="register-form" onSubmit={handleRegister}>
+          <div className="titulo">Aspec</div>
+          <div className="form">
+            <label htmlFor="fullName">Nome completo:</label>
             <input
-              className='name'
-              type='text'
-              id='fullName'
-              placeholder='Nome completo'
+              className="name"
+              type="text"
+              id="fullName"
+              placeholder="Nome completo"
               value={fullName}
               onChange={handleFullNameChange}
             />
-            <label htmlFor='email'>Email:</label>
+            <label htmlFor="email">Email:</label>
             <input
-              className='email'
-              type='text'
-              id='email'
-              placeholder='Email'
+              className="email"
+              type="text"
+              id="email"
+              placeholder="Email"
               value={email}
               onChange={handleEmailChange}
             />
-            <label htmlFor='password'>Senha:</label>
+            <label htmlFor="password">Senha:</label>
             <input
-              className='password'
-              type='password'
-              id='password'
-              placeholder='Crie sua Senha'
+              className="password"
+              type="password"
+              id="password"
+              placeholder="Crie sua Senha"
               value={password}
               onChange={handlePasswordChange}
             />
           </div>
-          <button className='button-registrar '>REGISTRAR</button>
+          <button className="button-registrar ">REGISTRAR</button>
         </form>
       </div>
     </div>
