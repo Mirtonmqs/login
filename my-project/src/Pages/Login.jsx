@@ -5,8 +5,8 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const api_url = 'http://localhost:3000';
-  const [setUser] = useState(null);
+  const api_url = 'http://localhost:3000/api/login';
+  const apiUserDataUrl = 'http://localhost:3000/api/user';
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -30,10 +30,20 @@ const Login = () => {
       setPassword('');
     }
   };
+  console.log(axios);
 
-  const updateUserData = (userData) => {
-    // Atualiza o estado 'user'
-    setUser(userData);
+  const updateUserData = async () => {
+    try {
+      const token = localStorage.getItem('token');
+      const response = await axios.get(apiUserDataUrl, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+
+      setUserData(response.data);
+    } catch (error) {
+      console.error('Erro ao obter dados do usuário:', error);
+      setError('Erro ao obter dados do usuário.');
+    }
   };
 
   return (
