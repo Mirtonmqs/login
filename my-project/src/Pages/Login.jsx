@@ -1,55 +1,39 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const Login = () => {
+function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const api_url = 'http://localhost:3000/api/login';
-  const apiUserDataUrl = 'http://localhost:3000/api/user';
 
-  const handleLogin = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(api_url, { email, password });
-
-      if (response.data.success) {
-        localStorage.setItem('token', response.data.token);
-        updateUserData(response.data.user);
-        window.location.href = '/registro';
-      } else {
-        setError('Erro nas credenciais');
-        setEmail('');
-        setPassword('');
-      }
-    } catch (error) {
-      console.error('Erro ao fazer a solicitação:', error);
-      setError('Erro ao fazer a solicitação.');
-      setEmail('');
-      setPassword('');
-    }
-  };
-  console.log(axios);
-
-  const updateUserData = async () => {
-    try {
-      const token = localStorage.getItem('token');
-      const response = await axios.get(apiUserDataUrl, {
-        headers: { Authorization: `Bearer ${token}` },
+      const response = await axios.post('http://localhost:3000/api/login', {
+        email,
+        password,
       });
-
-      setUserData(response.data);
+      console.log('Login successful!', response.data);
+      window.location.href = '/registro';
     } catch (error) {
-      console.error('Erro ao obter dados do usuário:', error);
-      setError('Erro ao obter dados do usuário.');
+      if (error.response) {
+        console.error('Error during login:', error.response.data);
+        setError('Invalid email or password. Please try again.');
+      } else if (error.request) {
+        console.error('No response from server:', error.request);
+        setError('No response from server. Please try again later.');
+      } else {
+        console.error('Request setup error:', error.message);
+        setError('An error occurred. Please try again later.');
+      }
     }
   };
 
   return (
     <div className="bg-light">
       <div className="login">
-        <form className="login-form" onSubmit={handleLogin}>
+        <form className="login-form" onSubmit={handleSubmit}>
           <div className="titulo">Aspec</div>
           <div className="form">
             <label htmlFor="email">Email:</label>
@@ -91,6 +75,6 @@ const Login = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Login;
