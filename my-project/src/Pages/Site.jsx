@@ -1,9 +1,10 @@
 import React, { useState, useContext } from 'react';
 import { FiSearch } from 'react-icons/fi';
-import { IoChatboxOutline } from 'react-icons/io5';
-import { IoNotificationsOffOutline } from 'react-icons/io5';
+import { IoNotificationsOffOutline, IoChatboxOutline } from 'react-icons/io5';
+import { CiLogout, CiUser, CiHome } from 'react-icons/ci';
 import { UserContext } from '@/contexts/UserContexts';
 import logo from '@/img/logoaspec.png';
+import perfil from '@/img/perfil.png';
 import '@/styles/Site.css';
 
 const Site2 = () => {
@@ -28,28 +29,48 @@ const Site2 = () => {
   return (
     <>
       <div className={`${sidebarOpen ? 'open' : 'close'}`}>
-        <div class="container">
-          <div class="sidebar">
+        <div className="container">
+          <div className="sidebar">
             <div className="topo-sidebar">
               <a href="#">
                 <img className="logo" src={logo} alt="Logo" />
               </a>
             </div>
-            <div class="buttons">
+            <div className="buttons">
               <button>
-                <a href="">Início</a>
+                <a href="">
+                  {' '}
+                  <span className="icon-home">
+                    {' '}
+                    <CiHome />
+                  </span>
+                  Início
+                </a>
               </button>
               <button>
-                <a href="">Usuários</a>
+                <a href="/usuarios">
+                  {' '}
+                  <span className="icon-user">
+                    {' '}
+                    <CiUser />
+                  </span>
+                  Usuários
+                </a>
               </button>
               <button>
-                <a href="">Sair</a>
+                <a href="/">
+                  {' '}
+                  <span className="icon-logout">
+                    <CiLogout />
+                  </span>
+                  Sair
+                </a>
               </button>
             </div>
           </div>
 
-          <div class="bg-site">
-            <div class="navbar">
+          <div className="bg-site">
+            <div className="navbar">
               <div className="btn-menu">
                 <button className="toggle-btn" onClick={toggleSidebar}>
                   <span className="menu-icon">&#9776;</span>
@@ -73,10 +94,14 @@ const Site2 = () => {
                     <IoNotificationsOffOutline />
                   </button>
                 </div>
+                <div className="perfil">
+                  <h1>Usuario</h1>
+                  <img className="img-perfil" src={perfil} alt="perfil" />
+                </div>
               </form>
             </div>
             <div className="corpo">
-                <h1 className='titulo-site'>Tables</h1>
+              <h1 className="titulo-site">Tables</h1>
               <div className="text1">
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. A
