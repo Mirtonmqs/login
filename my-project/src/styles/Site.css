@@ -68,7 +68,6 @@
   font-size: 16px;
 }
 
-
 /*login*/
 label {
   display: none;
@@ -132,8 +131,8 @@ label {
   height: 100vh;
   display: flex;
   justify-content: center;
-  margin-top: 100px;
-  background-color: #fff;
+  margin-top: px;
+  background-color: #F6F8FB;
 }
 
 .form-usuarios {
@@ -142,6 +141,7 @@ label {
   border-radius: 8px;
   width: 80%;
   height: 200px;
+  margin-top: 50px;
 }
 
 .titulo-usuarios {
@@ -164,7 +164,7 @@ table td {
 }
 
 table th {
-  background-color: cornflowerblue;
+color: #88c21c;
 }
 
 th.id {
@@ -183,9 +183,13 @@ th.email {
   width: 250px;
 }
 
-table tbody tr:nth-child(even) {
-  background-color: #d3d3d3;
+tbody  {
+  color:#ccc;
 }
+thead  {
+  color:#ccc;
+}
+
 
 /* site*/
 html,
@@ -323,11 +327,15 @@ body {
   display: flex;
   right: 100px;
   position: fixed;
-  margin-top: 8px;
+  margin-top: 4px;
+}
+
+.nome-usuario {
+font-size: 20px;
 }
 
 .img-perfil {
-  max-width: 35px;
+  max-width: 55px;
   margin-left: 14px;
 }
 

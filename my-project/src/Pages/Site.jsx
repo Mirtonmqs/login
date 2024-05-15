@@ -95,7 +95,7 @@ const Site2 = () => {
                   </button>
                 </div>
                 <div className="perfil">
-                  <h1>Usuario</h1>
+                  <div className='nome-usuario'>Usuario</div>
                   <img className="img-perfil" src={perfil} alt="perfil" />
                 </div>
               </form>
