@@ -111,7 +111,7 @@ label {
   left: 0;
   right: 0;
   width: 500px;
-  height: 500px;
+  height: 550px;
   margin: auto;
 }
 
@@ -169,11 +169,16 @@ label {
 .table td {
   padding: 10px;
   border: 1px solid #ddd;
+
+}
+
+.column-actions {
+  width: 100px;
 }
 
 .table th {
-  background-color: #f2f2f2;
-  font-weight: bold;color: #737C83z;
+  background-color: #6c63fe;
+  font-weight: bold;color: #293042;
 }
 
 .table td {
@@ -370,4 +375,40 @@ font-size: 20px;
   margin: 0 auto;
   margin-top: px;
   margin-left: 0px;
+}
+
+/* Site.css */
+
+.input-edit {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-edit:focus {
+  border-color: #66afe9;
+  outline: none;
+  box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.icon-save, .icon-edit, .icon-delete {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin: 0 2px;
+  font-size: 18px;
+}
+
+.icon-save:hover, .icon-edit:hover, .icon-delete:hover {
+  color: #007bff;
+}
+
+.icon-save:focus, .icon-edit:focus, .icon-delete:focus {
+  outline: none;
+  color: #0056b3;
 }

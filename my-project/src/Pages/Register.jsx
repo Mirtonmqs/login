@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import '@/styles/Site.css';
 
 const Register = () => {
-  const [fullName, setFullName] = useState('');
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [login, setLogin] = useState('');
 
-  const handleFullNameChange = (e) => {
-    setFullName(e.target.value);
+  const handleNameChange = (e) => {
+    setName(e.target.value);
   };
 
   const handleEmailChange = (e) => {
@@ -18,16 +20,28 @@ const Register = () => {
     setPassword(e.target.value);
   };
 
-  const handleRegister = (e) => {
+  const handleLoginChange = (e) => {
+    setLogin(e.target.value);
+  };
+
+  const handleRegister = async (e) => {
     e.preventDefault();
 
-    if (fullName && email && password) {
+    try {
+      const response = await axios.post('http://localhost:3000/api/usuarios', {
+        name,
+        email,
+        password,
+        login
+      });
       alert('Registro bem-sucedido!');
-      setFullName('');
+      setName('');
       setEmail('');
       setPassword('');
-    } else {
-      alert('Preencha todos os campos.');
+      setLogin('');
+    } catch (error) {
+      console.error('Erro ao registrar usuário:', error);
+      alert('Erro ao registrar usuário. Por favor, tente novamente.');
     }
   };
 
@@ -37,14 +51,14 @@ const Register = () => {
         <form className="register-form" onSubmit={handleRegister}>
           <div className="titulo">Aspec</div>
           <div className="form">
-            <label htmlFor="fullName">Nome completo:</label>
+            <label htmlFor="name">Nome completo:</label>
             <input
               className="name"
               type="text"
-              id="fullName"
+              id="Name"
               placeholder="Nome completo"
-              value={fullName}
-              onChange={handleFullNameChange}
+              value={name}
+              onChange={handleNameChange}
             />
             <label htmlFor="email">Email:</label>
             <input
@@ -54,6 +68,15 @@ const Register = () => {
               placeholder="Email"
               value={email}
               onChange={handleEmailChange}
+            />
+            <label htmlFor="login">Login:</label>
+            <input
+              className="nome"
+              type="text"
+              id="login"
+              placeholder="Login"
+              value={login}
+              onChange={handleLoginChange}
             />
             <label htmlFor="password">Senha:</label>
             <input
@@ -65,7 +88,7 @@ const Register = () => {
               onChange={handlePasswordChange}
             />
           </div>
-          <button className="button-registrar ">REGISTRAR</button>
+          <button className="button-registrar">REGISTRAR</button>
         </form>
       </div>
     </div>
