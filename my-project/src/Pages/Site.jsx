@@ -2,15 +2,14 @@ import React, { useState, useContext } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import { IoNotificationsOffOutline, IoChatboxOutline } from 'react-icons/io5';
 import { CiLogout, CiUser, CiHome } from 'react-icons/ci';
-import { UserContext } from '@/contexts/UserContexts';
 import logo from '@/img/logoaspec.png';
 import perfil from '@/img/perfil.png';
 import '@/styles/Site.css';
+import { Link } from 'react-router-dom';
 
 const Site2 = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
-  const { user } = useContext(UserContext);
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -28,7 +27,7 @@ const Site2 = () => {
 
   return (
     <>
-      <div className={`${sidebarOpen ? 'open' : 'close'}`}>
+      <div className={`${sidebarOpen ? 'open' : 'closed'}`}>
         <div className="container">
           <div className="sidebar">
             <div className="topo-sidebar">
@@ -36,35 +35,24 @@ const Site2 = () => {
                 <img className="logo" src={logo} alt="Logo" />
               </a>
             </div>
-            <div className="buttons">
+            <div className="menu">
               <button>
-                <a href="">
-                  {' '}
-                  <span className="icon-home">
-                    {' '}
-                    <CiHome />
-                  </span>
+                <Link to="/">
+                  <CiHome className="icon-home" aria-label="Início" />
                   Início
-                </a>
+                </Link>
               </button>
               <button>
-                <a href="/usuarios">
-                  {' '}
-                  <span className="icon-user">
-                    {' '}
-                    <CiUser />
-                  </span>
+                <Link to="/usuarios">
+                  <CiUser className="icon-user" aria-label="Usuários" />
                   Usuários
-                </a>
+                </Link>
               </button>
               <button>
-                <a href="/">
-                  {' '}
-                  <span className="icon-logout">
-                    <CiLogout />
-                  </span>
+                <Link to="/">
+                  <CiLogout className="icon-logout" aria-label="Sair" />
                   Sair
-                </a>
+                </Link>
               </button>
             </div>
           </div>
@@ -95,7 +83,7 @@ const Site2 = () => {
                   </button>
                 </div>
                 <div className="perfil">
-                  <div className='nome-usuario'>Usuario</div>
+                  <div className="nome-usuario">Usuario</div>
                   <img className="img-perfil" src={perfil} alt="perfil" />
                 </div>
               </form>

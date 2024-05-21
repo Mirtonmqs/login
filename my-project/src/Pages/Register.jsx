@@ -32,7 +32,7 @@ const Register = () => {
         name,
         email,
         password,
-        login
+        login,
       });
       alert('Registro bem-sucedido!');
       setName('');
