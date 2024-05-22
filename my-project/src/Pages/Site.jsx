@@ -3,7 +3,7 @@ import { FiSearch } from 'react-icons/fi';
 import { IoNotificationsOffOutline, IoChatboxOutline } from 'react-icons/io5';
 import { CiLogout, CiUser, CiHome } from 'react-icons/ci';
 import logo from '@/img/logoaspec.png';
-import perfil from '@/img/perfil.png';
+import perfil from '@/img/perfil.jpg';
 import '@/styles/Site.css';
 import { Link } from 'react-router-dom';
 
@@ -83,20 +83,22 @@ const Site2 = () => {
                   </button>
                 </div>
                 <div className="perfil">
-                  <div className="nome-usuario">Usuario</div>
                   <img className="img-perfil" src={perfil} alt="perfil" />
+                  <div className="nome-usuario">Usuario</div>
                 </div>
               </form>
             </div>
             <div className="corpo">
-              <h1 className="titulo-site">Tables</h1>
-              <div className="text1">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A
-                  inventore maxime voluptatem assumenda, officiis ex corporis
-                  sint cupiditate praesentium quis distinctio dicta possimus cum
-                  laboriosam nulla, nisi deleniti. Corrupti, nisi?
-                </p>
+              <h1 className="title-table">Tables</h1>
+              <div className="table-users">
+                <div className="text1">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A
+                    inventore maxime voluptatem assumenda, officiis ex corporis
+                    sint cupiditate praesentium quis distinctio dicta possimus
+                    cum laboriosam nulla, nisi deleniti. Corrupti, nisi?
+                  </p>
+                </div>
               </div>
             </div>
           </div>
