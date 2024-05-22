@@ -389,3 +389,39 @@ body {
 .closed .form-site {
   padding-left: 70px;
 }
+
+/* Estilos gerais */
+body, .container, .navbar, .sidebar, .bg-site, .corpo, .table-users, .form-site, .toggle-btn, .toggle-dark-mode-btn {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo Claro */
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+/* Modo Escuro */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .navbar,
+.dark-mode .sidebar,
+.dark-mode .bg-site,
+.dark-mode .corpo,
+.dark-mode .table-users {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .form-site input {
+  background-color: #2e2e2e;
+  color: white;
+}
+
+/* Outros estilos específicos do modo escuro */
+.dark-mode .toggle-dark-mode-btn {
+  background-color: #3e3e3e;
+  color: white;
+}
