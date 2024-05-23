@@ -46,49 +46,49 @@ const Register = () => {
   };
 
   return (
-    <div className="bg-light">
-      <div className="register">
-        <form className="register-form" onSubmit={handleRegister}>
-          <div className="titulo">Aspec</div>
-          <div className="form">
-            <label htmlFor="name">Nome completo:</label>
+    <div className='bg-light'>
+      <div className='register'>
+        <form className='register-form' onSubmit={handleRegister}>
+          <div className='titulo'>Aspec</div>
+          <div className='form'>
+            <label htmlFor='name'>Nome completo:</label>
             <input
-              className="name"
-              type="text"
-              id="Name"
-              placeholder="Nome completo"
+              className='name'
+              type='text'
+              id='Name'
+              placeholder='Nome completo'
               value={name}
               onChange={handleNameChange}
             />
-            <label htmlFor="email">Email:</label>
+            <label htmlFor='email'>Email:</label>
             <input
-              className="email"
-              type="text"
-              id="email"
-              placeholder="Email"
+              className='email'
+              type='text'
+              id='email'
+              placeholder='Email'
               value={email}
               onChange={handleEmailChange}
             />
-            <label htmlFor="login">Login:</label>
+            <label htmlFor='login'>Login:</label>
             <input
-              className="nome"
-              type="text"
-              id="login"
-              placeholder="Login"
+              className='nome'
+              type='text'
+              id='login'
+              placeholder='Login'
               value={login}
               onChange={handleLoginChange}
             />
-            <label htmlFor="password">Senha:</label>
+            <label htmlFor='password'>Senha:</label>
             <input
-              className="password"
-              type="password"
-              id="password"
-              placeholder="Crie sua Senha"
+              className='password'
+              type='password'
+              id='password'
+              placeholder='Crie sua Senha'
               value={password}
               onChange={handlePasswordChange}
             />
           </div>
-          <button className="button-registrar">REGISTRAR</button>
+          <button className='button-registrar'>REGISTRAR</button>
         </form>
       </div>
     </div>
