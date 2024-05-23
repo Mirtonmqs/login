@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
-import { IoNotificationsOffOutline, IoChatboxOutline } from 'react-icons/io5';
+import { IoNotificationsOffOutline, IoChatboxOutline, IoSunnyOutline } from 'react-icons/io5';
 import { CiLogout, CiUser, CiHome } from 'react-icons/ci';
-import { FaSun, FaMoon } from 'react-icons/fa'; // Importando os ícones para o modo claro e escuro
+import { FiMoon } from 'react-icons/fi';
 import logo from '@/img/logoaspec.png';
 import perfil from '@/img/perfil.jpg';
 import '@/styles/Site.css';
@@ -87,9 +87,9 @@ const Site2 = () => {
                 </button>
               </div>
               <div className="perfil">
-              <button className="toggle-dark-mode-btn" onClick={toggleDarkMode}>
-                {darkMode ? <FaSun /> : <FaMoon />} 
-              </button>
+                <button className="toggle-dark-mode-btn" onClick={toggleDarkMode}>
+                  {darkMode ?  <IoSunnyOutline /> : <FiMoon />} 
+                </button>
                 <img className="img-perfil" src={perfil} alt="perfil" />
                 <div className="nome-usuario">Usuario</div>
               </div>

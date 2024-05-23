@@ -315,22 +315,27 @@ body {
 
 .form-site input[type="text"] {
   background-color: #F4F7F9;
-  margin: 10px;
+  margin: 12px;
   width: 200px;
   height: 40px;
   border-radius: 3px;
   border: none;
-  font-size: 16px;
+  font-size: 13px;
   margin-top: 12px;
   margin-right: -12px;
 }
 
-.icons {
+input[type="text"]::placeholder {
+  color: #999; 
+  padding-left: 14px;
+}
+
+.icons { 
   display: flex;
 }
 
 .btn-lupa {
-  margin: 10px;
+  margin: 1px;
   width: 40px;
   height: 42px;
   color: #555;
@@ -390,38 +395,70 @@ body {
   padding-left: 70px;
 }
 
-/* Estilos gerais */
-body, .container, .navbar, .sidebar, .bg-site, .corpo, .table-users, .form-site, .toggle-btn, .toggle-dark-mode-btn {
-  transition: background-color 0.3s, color 0.3s;
-}
 
-/* Modo Claro */
+/* darkmode */
 .light-mode {
   background-color: white;
   color: black;
 }
 
-/* Modo Escuro */
 .dark-mode {
-  background-color: #121212;
+  background-color: #202634;
   color: white;
 }
 
 .dark-mode .navbar,
-.dark-mode .sidebar,
 .dark-mode .bg-site,
-.dark-mode .corpo,
-.dark-mode .table-users {
-  background-color: #1e1e1e;
+.dark-mode .corpo {
+  background-color: #1a1a33;
 }
 
 .dark-mode .form-site input {
-  background-color: #2e2e2e;
+  background-color: #293042;
   color: white;
 }
 
-/* Outros estilos específicos do modo escuro */
 .dark-mode .toggle-dark-mode-btn {
-  background-color: #3e3e3e;
+  background-color: #00008b;
   color: white;
+  background: none;
+  border: transparent;
+  margin-right: 50px;
+  margin-top: 8px;
+}
+
+/* botao de lua */
+.toggle-dark-mode-btn {
+  background-color: #00008b;
+  color: rgb(56, 54, 54);
+  background: none;
+  border: transparent;
+  margin-right: 50px;
+  margin-top: 8px;
+}
+
+.dark-mode .icon-msg,  
+.dark-mode .icon-sino  {
+  background-color: #00008b;
+  color: white;
+  background: none;
+  border: transparent;
+}
+
+.dark-mode .bg-site {
+  background-color: #00008b; 
+}
+
+.toggle-dark-mode-btn {
+  font-size: 20px;
+  background: none;
+  border: transparent;
+}
+
+.dark-mode .btn-lupa {
+  background-color: #293042; 
+}
+
+.dark-mode .text1 {
+  color: #293042; 
 }
