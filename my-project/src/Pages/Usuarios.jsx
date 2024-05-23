@@ -1,3 +1,4 @@
+// src/Pages/Usuarios.jsx
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '@/styles/Site.css';
@@ -32,7 +33,6 @@ const Pessoa = ({ pessoa, isEditing, onEdit, onSave, onChange, onDelete }) => {
           name
         )}
       </td>
-
       <td>
         {isEditing ? (
           <input
@@ -45,7 +45,6 @@ const Pessoa = ({ pessoa, isEditing, onEdit, onSave, onChange, onDelete }) => {
           login
         )}
       </td>
-
       <td className="actions">
         {isEditing ? (
           <button className="icon-save" onClick={() => onSave(pessoa)}>
@@ -64,7 +63,7 @@ const Pessoa = ({ pessoa, isEditing, onEdit, onSave, onChange, onDelete }) => {
   );
 };
 
-const ListagemPessoas = () => {
+const Usuarios = () => {
   const [pessoas, setPessoas] = useState([]);
   const [error, setError] = useState('');
   const [editingId, setEditingId] = useState(null);
@@ -75,15 +74,11 @@ const ListagemPessoas = () => {
       try {
         const response = await axios.get('http://localhost:3000/api/usuarios');
         setPessoas(response.data.users);
-        console.log(response.data.users);
       } catch (error) {
         console.error('Erro ao buscar pessoas:', error);
-        setError(
-          'Erro ao carregar os dados. Por favor, tente novamente mais tarde.',
-        );
+        setError('Erro ao carregar os dados. Por favor, tente novamente mais tarde.');
       }
     };
-
     fetchPessoas();
   }, []);
 
@@ -108,14 +103,11 @@ const ListagemPessoas = () => {
 
   const handleSave = async (pessoa) => {
     try {
-      const response = await axios.put(
-        `http://localhost:3000/api/usuarios/${pessoa.id}`,
-        {
-          email: editValues.email,
-          name: editValues.name,
-          login: editValues.login,
-        },
-      );
+      const response = await axios.put(`http://localhost:3000/api/usuarios/${pessoa.id}`, {
+        email: editValues.email,
+        name: editValues.name,
+        login: editValues.login,
+      });
       const updatedPessoa = response.data.user;
       setPessoas((prevPessoas) =>
         prevPessoas.map((p) => (p.id === updatedPessoa.id ? updatedPessoa : p)),
@@ -128,9 +120,7 @@ const ListagemPessoas = () => {
   };
 
   const handleDelete = async (id) => {
-    const confirmDelete = window.confirm(
-      'Você tem certeza que deseja excluir este usuário?',
-    );
+    const confirmDelete = window.confirm('Você tem certeza que deseja excluir este usuário?');
     if (confirmDelete) {
       try {
         await axios.delete(`http://localhost:3000/api/usuarios/${id}`);
@@ -170,10 +160,11 @@ const ListagemPessoas = () => {
               ))}
             </tbody>
           </table>
+          {error && <div className="error-message">{error}</div>}
         </div>
       </div>
     </div>
   );
 };
 
-export default ListagemPessoas;
+export default Usuarios;

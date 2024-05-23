@@ -4,14 +4,15 @@ import { IoNotificationsOffOutline, IoChatboxOutline, IoSunnyOutline } from 'rea
 import { CiLogout, CiUser, CiHome } from 'react-icons/ci';
 import { FiMoon } from 'react-icons/fi';
 import logo from '@/img/logoaspec.png';
-import perfil from '@/img/perfil.jpg';
+import perfil from '@/img/perfil.png';
 import '@/styles/Site.css';
-import { Link } from 'react-router-dom';
+import Usuarios from '@/Pages/Usuarios';
 
 const Site2 = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [darkMode, setDarkMode] = useState(false);
+  const [activeComponent, setActiveComponent] = useState('home');
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -30,6 +31,24 @@ const Site2 = () => {
     setDarkMode(!darkMode);
   };
 
+  const renderActiveComponent = () => {
+    switch (activeComponent) {
+      case 'home':
+        return (
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A inventore
+            maxime voluptatem assumenda, officiis ex corporis sint cupiditate
+            praesentium quis distinctio dicta possimus cum laboriosam nulla,
+            nisi deleniti. Corrupti, nisi?
+          </p>
+        );
+      case 'usuarios':
+        return <Usuarios />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className={`${sidebarOpen ? 'open' : 'closed'} ${darkMode ? 'dark-mode' : 'light-mode'}`}>
       <div className="container">
@@ -40,23 +59,17 @@ const Site2 = () => {
             </a>
           </div>
           <div className="menu">
-            <button>
-              <Link to="/">
-                <CiHome className="icon-home" aria-label="Início" />
-                Início
-              </Link>
+            <button onClick={() => setActiveComponent('home')}>
+              <CiHome className="icon-home" aria-label="Início" />
+              Início
             </button>
-            <button>
-              <Link to="/usuarios">
-                <CiUser className="icon-user" aria-label="Usuários" />
-                Usuários
-              </Link>
+            <button onClick={() => setActiveComponent('usuarios')}>
+              <CiUser className="icon-user" aria-label="Usuários" />
+              Usuários
             </button>
-            <button>
-              <Link to="/">
-                <CiLogout className="icon-logout" aria-label="Sair" />
-                Sair
-              </Link>
+            <button onClick={() => setActiveComponent('logout')}>
+              <CiLogout className="icon-logout" aria-label="Sair" />
+              Sair
             </button>
           </div>
         </div>
@@ -76,22 +89,21 @@ const Site2 = () => {
                 onChange={handleSearchChange}
               />
               <div className="icons">
-                <button className="btn-lupa">
+                <button className="btn-lupa" type="submit">
                   <FiSearch />
                 </button>
-                <button className="icon-msg">
+                <button className="icon-msg" type="button">
                   <IoChatboxOutline />
                 </button>
-                <button className="icon-sino">
+                <button className="icon-sino" type="button">
                   <IoNotificationsOffOutline />
                 </button>
               </div>
               <div className="perfil">
-                <button className="toggle-dark-mode-btn" onClick={toggleDarkMode}>
-                  {darkMode ?  <IoSunnyOutline /> : <FiMoon />} 
+                <button className="toggle-dark-mode-btn" type="button" onClick={toggleDarkMode}>
+                  {darkMode ? <IoSunnyOutline /> : <FiMoon />}
                 </button>
                 <img className="img-perfil" src={perfil} alt="perfil" />
-                <div className="nome-usuario">Usuario</div>
               </div>
             </form>
           </div>
@@ -99,12 +111,7 @@ const Site2 = () => {
             <h1 className="title-table">Tables</h1>
             <div className="table-users">
               <div className="text1">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A
-                  inventore maxime voluptatem assumenda, officiis ex corporis
-                  sint cupiditate praesentium quis distinctio dicta possimus
-                  cum laboriosam nulla, nisi deleniti. Corrupti, nisi?
-                </p>
+                {renderActiveComponent()}
               </div>
             </div>
           </div>

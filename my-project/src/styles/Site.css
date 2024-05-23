@@ -113,7 +113,7 @@ label {
   left: 0;
   right: 0;
   width: 500px;
-  height: 550px;
+  height: 580px;
   margin: auto;
 }
 
@@ -418,12 +418,13 @@ input[type="text"]::placeholder {
   color: white;
 }
 
+/* botao sol */
 .dark-mode .toggle-dark-mode-btn {
   background-color: #00008b;
   color: white;
   background: none;
   border: transparent;
-  margin-right: 50px;
+  margin-right: 90px;
   margin-top: 8px;
 }
 
@@ -433,7 +434,7 @@ input[type="text"]::placeholder {
   color: rgb(56, 54, 54);
   background: none;
   border: transparent;
-  margin-right: 50px;
+  margin-right: 90px;
   margin-top: 8px;
 }
 
