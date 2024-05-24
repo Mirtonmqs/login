@@ -126,6 +126,7 @@ label {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
+  margin-top: -25px;
 }
 
 /* usuarios */
@@ -154,13 +155,14 @@ label {
 }
 
 .actions button {
-  background-color: #6C757D;
-  color: #fff;
+  background-color: transparent;
+  color: #1a1a33;
   border: none;
-  padding: 6px 10px;
-  margin-right: 8px;
   border-radius: 4px;
+  padding: 2px 6px;
+  margin-right: 2px;
   cursor: pointer;
+  font-size: 20px;
 }
 
 .actions button:hover {
@@ -178,7 +180,7 @@ label {
 }
 
 .table th {
-  background-color: #6c63fe;
+  background-color: #f9f9f9;
   font-weight: bold;
   color: #293042;
 }
@@ -330,9 +332,6 @@ input[type="text"]::placeholder {
   padding-left: 14px;
 }
 
-.icons { 
-  display: flex;
-}
 
 .btn-lupa {
   margin: 1px;
@@ -346,6 +345,21 @@ input[type="text"]::placeholder {
   margin-top: 12px;
 }
 
+.img-bandeira {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.img-bandeira img {
+  width: 30px; 
+  height: 30px; 
+  border-radius: 50%; 
+  margin-top: 10px;
+  margin-right: 3px;
+}
+
 .perfil {
   align-items: center;
   font-size: 10px;
@@ -353,35 +367,46 @@ input[type="text"]::placeholder {
   right: 100px;
   position: fixed;
   margin-top: 4px;
+  margin-right: -65px;
 }
 
-.nome-usuario {
-  font-size: 15px;
+.user-name {
+  font-size: 13px;
+  margin-top: 6px;
+  margin-left: 6px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .img-perfil {
-  max-width: 50px;
-  margin-left: 14px;
-  background-color: none;
+  width: 40px; 
+  height: 40px; 
+  border-radius: 100%;
+  margin-top: 10px; 
+  margin-left: 14px; 
 }
+
 
 .icon-msg,
 .icon-sino {
-
   font-size: 19px;
   border: none;
   background-color: #FFFFFF;
   position: fixed;
-  top: 20px;
-  margin-right: -40px;
+  top: 22px;
+  margin-right: -49px;
 }
 
 .icon-msg {
-  right: 340px;
+  right: 345px;
+  color:#444;
+  margin-right: -49px;
 }
 
 .icon-sino {
   right: 300px;
+  color: #333;
 }
 
 .closed .sidebar {
@@ -419,23 +444,25 @@ input[type="text"]::placeholder {
   color: white;
 }
 
+/* botao de sol */
 .dark-mode .toggle-dark-mode-btn {
   background-color: #00008b;
   color: white;
   background: none;
   border: transparent;
-  margin-right: 50px;
-  margin-top: 8px;
+  margin-right: 12px;
+  margin-top: 12px;
 }
 
 /* botao de lua */
 .toggle-dark-mode-btn {
   background-color: #00008b;
-  color: rgb(56, 54, 54);
+  color: #555;
   background: none;
   border: transparent;
-  margin-right: 50px;
-  margin-top: 8px;
+  margin-right: 12px;
+  margin-top: 12px;
+  font-size: 20px;
 }
 
 .dark-mode .icon-msg,  
@@ -450,16 +477,55 @@ input[type="text"]::placeholder {
   background-color: #00008b; 
 }
 
-.toggle-dark-mode-btn {
-  font-size: 20px;
-  background: none;
-  border: transparent;
-}
-
 .dark-mode .btn-lupa {
   background-color: #293042; 
 }
 
 .dark-mode .text1 {
   color: #293042; 
+}
+
+.dark-mode .table td {
+  color: #293042; 
+}
+
+.dark-mode .bg-usuarios {
+  background-color:#1a1a33; 
+}
+
+.dark-mode .form-usuarios {
+  background-color:#293042;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.dark-mode .table th {
+  background-color:#293042;
+  font-weight: bold;
+  color: #293042;
+}
+
+.dark-mode .table th,
+.dark-mode .table td {
+  color: #e5e2ff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #293042;
+}
+
+.dark-mode .actions button {
+  background-color:#293042;
+  color: #fff;
+  border: none;
+  padding: 2px 6px;
+  margin-right: 2px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+@media (max-width: 800px){
+ .navbar {
+  background-color: #00008b;
+ } 
 }

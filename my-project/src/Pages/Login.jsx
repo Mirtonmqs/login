@@ -13,11 +13,11 @@ function Login() {
         email,
         password,
       });
-      const token = response.data.user.token;
+      const { token, user } = response.data;
       localStorage.setItem('token', token);
-      console.log('Token recebido:', token);
+      localStorage.setItem('user', JSON.stringify(user));
+      console.log('Login successful!', user);
       window.location.href = '/site';
-      console.log('Login successful!', response.data, token);
     } catch (error) {
       handleError(error);
     }
@@ -29,9 +29,7 @@ function Login() {
       setError('E-mail ou senha inválidos. Por favor, tente novamente.');
     } else if (error.request) {
       console.error('Sem resposta do servidor:', error.request);
-      setError(
-        'Sem resposta do servidor. Por favor, tente novamente mais tarde.',
-      );
+      setError('Sem resposta do servidor. Por favor, tente novamente mais tarde.');
     } else {
       console.error('Erro na configuração da requisição:', error.message);
       setError('Ocorreu um erro. Por favor, tente novamente mais tarde.');
