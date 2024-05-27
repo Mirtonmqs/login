@@ -395,13 +395,13 @@ input[type="text"]::placeholder {
   background-color: #FFFFFF;
   position: fixed;
   top: 22px;
-  margin-right: -49px;
+  margin-right: -89px;
 }
 
 .icon-msg {
   right: 345px;
   color:#444;
-  margin-right: -49px;
+  margin-right: -89px;
 }
 
 .icon-sino {
@@ -436,7 +436,7 @@ input[type="text"]::placeholder {
 .dark-mode .navbar,
 .dark-mode .bg-site,
 .dark-mode .corpo {
-  background-color: #1a1a33;
+  background-color: #202634;
 }
 
 .dark-mode .form-site input {

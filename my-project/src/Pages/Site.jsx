@@ -10,7 +10,6 @@ import perfil from '@/img/perfil.png';
 import '@/styles/Site.css';
 import Usuarios from '@/Pages/Usuarios';
 import { UserContext, UserProvider } from '@/Pages/Context';
-import buttonImage from '@/img/eua.jpg';
 
 const Site2 = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -120,14 +119,11 @@ const Site2 = () => {
                 >
                   {darkMode ? <IoSunnyOutline /> : <FiMoon />}
                 </button>
-                <button className="img-bandeira" type="button">
-                  <img src={buttonImage} alt="Button Image" />
-                </button>
-
+            
                 <img
                   className="img-perfil"
-                  src={user?.image || perfil}
-                  alt="perfil"
+                  src={user ? user.img : 'nao carregou'}
+                  
                 />
                 <span className="user-name">
                   {user ? user.name : 'Carregando...'}
