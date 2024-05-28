@@ -1,7 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import { LuMessageCircle } from 'react-icons/lu';
-
 import { IoNotificationsOffOutline, IoSunnyOutline } from 'react-icons/io5';
 import { CiLogout, CiUser, CiHome } from 'react-icons/ci';
 import { FiMoon } from 'react-icons/fi';
@@ -68,10 +67,10 @@ const Site2 = () => {
         <div className="sidebar">
           <div className="topo-sidebar">
             <a href="#">
-              <img className="logo" src={logo} alt="Logo" />
+              <img className="logo-sidebar" src={logo} alt="Logo" />
             </a>
           </div>
-          <div className="menu">
+          <div className="menu-sidebar">
             <button onClick={() => setActiveComponent('home')}>
               <CiHome className="icon-home" aria-label="Início" />
               Início
@@ -88,10 +87,10 @@ const Site2 = () => {
         </div>
 
         <div className="bg-site">
-          <div className="navbar">
+          <div className="header">
             <div className="btn-menu">
-              <button className="toggle-btn" onClick={toggleSidebar}>
-                <span className="menu-icon">&#9776;</span>
+              <button className="toggle-sidebar" onClick={toggleSidebar}>
+                <span className="icon-toggle-sidebar">&#9776;</span>
               </button>
             </div>
             <form className="form-site" onSubmit={handleSearchSubmit}>

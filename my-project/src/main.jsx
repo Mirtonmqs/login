@@ -6,11 +6,9 @@ import Site from '@/Pages/Site';
 import Login from '@/Pages/Login';
 import Register from '@/Pages/Register';
 import Usuarios from '@/Pages/Usuarios';
-import { UserStorage } from '@/contexts/UserContexts';
 
 const App = () => (
   <BrowserRouter>
-    <UserStorage>
       <Routes>
         <Route path='/' element={<Login />} />
         <Route path='/errorpage' element={<ErrorPage />} />
@@ -19,7 +17,6 @@ const App = () => (
         <Route path='/usuarios' element={<Usuarios />} />
         <Route path='/site' element={<Site />} />
       </Routes>
-    </UserStorage>
   </BrowserRouter>
 );
 

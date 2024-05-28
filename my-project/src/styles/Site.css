@@ -17,24 +17,6 @@
   height: 100%;
 }
 
-.button-login {
-  font-size: 20px;
-  width: 88%;
-  background-color: #6c63fe;
-  padding: 20px;
-  margin: 0px 30px 50px 30px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.inscricao {
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
 /* formulario */
 .form {
   width: 100%;
@@ -86,7 +68,6 @@ label {
   height: 550px;
   margin: auto;
 }
-
 .button-login {
   font-size: 20px;
   width: 88%;
@@ -94,12 +75,15 @@ label {
   padding: 20px;
   margin: 0px 30px 50px 30px;
   font-family: "Roboto", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
 }
 
 .inscricao {
   text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-style: normal;
   font-size: 18px;
 }
 
@@ -129,7 +113,7 @@ label {
   margin-top: -25px;
 }
 
-/* usuarios */
+/* lista usuarios */
 .bg-usuarios {
   background-color: #f5f5f5;
   padding: 20px;
@@ -140,6 +124,7 @@ label {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  margin-top: 30px;
 }
 
 .titulo-usuarios {
@@ -193,17 +178,18 @@ label {
   background-color: #f9f9f9;
 }
 
-
-/* site */
-html,
-body {
-  height: 100%;
-  margin: 0;
-}
-
-.container {
-  display: flex;
-  height: 100%;
+/* sidebar */
+.toggle-sidebar {
+  color: #6C757D;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: fixed;
+  z-index: 2;
+  font-size: 40px;
+  margin-left: 10px;
+  margin-top: 2px;
 }
 
 .sidebar {
@@ -219,7 +205,7 @@ body {
   display: inline;
 }
 
-.logo {
+.logo-sidebar {
   width: 40px;
   height: 45px;
   margin-left: 32px;
@@ -232,6 +218,38 @@ body {
   margin-right: 10px;
 }
 
+.icon-toggle-sidebar {
+  font-size: 35px;
+}
+
+.menu-sidebar {
+  margin-top: 40px;
+}
+
+.menu-sidebar button {
+  color: #F6F8FB;
+  display: block;
+  margin: 20px 0px 0px 25px;
+  font-size: 14px;
+  background-color: transparent;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* site */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
 .bg-site {
   flex-grow: 1;
   display: flex;
@@ -240,47 +258,12 @@ body {
   margin-left: 265px;
 }
 
-.navbar {
+.header {
   height: 70px;
   background-color: #FFFFFF;
   position: fixed;
   width: 100%;
   z-index: 1;
-}
-
-.menu-icon {
-  font-size: 35px;
-}
-
-.toggle-btn {
-  color: #6C757D;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  position: fixed;
-  z-index: 2;
-  font-size: 20px;
-  margin-left: 10px;
-  margin-top: 2px;
-}
-
-.menu {
-  margin-top: 40px;
-}
-
-.menu button {
-  color: #F6F8FB;
-  display: block;
-  margin: 20px 0px 0px 25px;
-  font-size: 14px;
-  background-color: transparent;
-  border: none;
-}
-
-.menu button a {
-  color: #fff;
-  text-decoration: none;
 }
 
 .corpo {
@@ -299,15 +282,19 @@ body {
 }
 
 .title-table {
+  color: #555;
   font-size: 20px;
   margin: 40px 40px;
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
 }
 
 .text1 {
   margin: 50px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .form-site {
@@ -332,7 +319,6 @@ input[type="text"]::placeholder {
   padding-left: 14px;
 }
 
-
 .btn-lupa {
   margin: 1px;
   width: 40px;
@@ -343,21 +329,6 @@ input[type="text"]::placeholder {
   border: none;
   background-color: #F4F7F9;
   margin-top: 12px;
-}
-
-.img-bandeira {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-.img-bandeira img {
-  width: 30px; 
-  height: 30px; 
-  border-radius: 50%; 
-  margin-top: 10px;
-  margin-right: 3px;
 }
 
 .perfil {
@@ -387,28 +358,29 @@ input[type="text"]::placeholder {
   margin-left: 14px; 
 }
 
+/* Icon Styles */
+.icon-msg {
+  font-size: 19px;
+  border: none;
+  background-color: #FFFFFF;
+  position: fixed;
+  top: 22px;
+  right: 255px;
+  color: #444;
+}
 
-.icon-msg,
 .icon-sino {
   font-size: 19px;
   border: none;
   background-color: #FFFFFF;
   position: fixed;
   top: 22px;
-  margin-right: -89px;
-}
-
-.icon-msg {
-  right: 345px;
-  color:#444;
-  margin-right: -89px;
-}
-
-.icon-sino {
   right: 300px;
   color: #333;
+  margin-right: -89px;
 }
 
+/* Sidebar */
 .closed .sidebar {
   width: 0;
 }
@@ -421,40 +393,32 @@ input[type="text"]::placeholder {
   padding-left: 70px;
 }
 
-
-/* darkmode */
+/* Light Mode */
 .light-mode {
   background-color: white;
   color: black;
 }
 
+/* Dark Mode */
 .dark-mode {
   background-color: #202634;
   color: white;
 }
 
-.dark-mode .navbar,
+/* Dark Mode Header, Background Site, Corpo */
+.dark-mode .header,
 .dark-mode .bg-site,
 .dark-mode .corpo {
   background-color: #202634;
 }
 
+/* Dark Mode Form Input */
 .dark-mode .form-site input {
   background-color: #293042;
   color: white;
 }
 
-/* botao de sol */
-.dark-mode .toggle-dark-mode-btn {
-  background-color: #00008b;
-  color: white;
-  background: none;
-  border: transparent;
-  margin-right: 12px;
-  margin-top: 12px;
-}
-
-/* botao de lua */
+/* Toggle Dark Mode Button */
 .toggle-dark-mode-btn {
   background-color: #00008b;
   color: #555;
@@ -465,43 +429,40 @@ input[type="text"]::placeholder {
   font-size: 20px;
 }
 
-.dark-mode .icon-msg,  
-.dark-mode .icon-sino  {
+/* Dark Mode Icons */
+.dark-mode .icon-msg,
+.dark-mode .icon-sino {
   background-color: #00008b;
   color: white;
   background: none;
   border: transparent;
 }
 
-.dark-mode .bg-site {
-  background-color: #00008b; 
-}
-
 .dark-mode .btn-lupa {
-  background-color: #293042; 
+  background-color: #293042;
 }
 
 .dark-mode .text1 {
-  color: #293042; 
+  color: #293042;
 }
 
 .dark-mode .table td {
-  color: #293042; 
+  color: #293042;
 }
 
 .dark-mode .bg-usuarios {
-  background-color:#1a1a33; 
+  background-color: #1a1a33;
 }
 
 .dark-mode .form-usuarios {
-  background-color:#293042;
+  background-color: #293042;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
 }
 
 .dark-mode .table th {
-  background-color:#293042;
+  background-color: #293042;
   font-weight: bold;
   color: #293042;
 }
@@ -515,7 +476,7 @@ input[type="text"]::placeholder {
 }
 
 .dark-mode .actions button {
-  background-color:#293042;
+  background-color: #293042;
   color: #fff;
   border: none;
   padding: 2px 6px;
@@ -524,8 +485,9 @@ input[type="text"]::placeholder {
   font-size: 20px;
 }
 
-@media (max-width: 800px){
- .navbar {
-  background-color: #00008b;
- } 
+/* Responsive */
+@media (max-width: 800px) {
+  .header {
+    background-color: #00008b;
+  }
 }

@@ -6,45 +6,26 @@ import { AiTwotoneEdit, AiOutlineDelete, AiOutlineSave } from 'react-icons/ai';
 
 const Pessoa = ({ pessoa, isEditing, onEdit, onSave, onChange, onDelete }) => {
   const { id, email, name, login } = pessoa;
+
+  const renderCell = (value, type, field) => (
+    isEditing ? (
+      <input
+        className='input-edit'
+        type={type}
+        value={value}
+        onChange={(e) => onChange(id, field, e.target.value)}
+      />
+    ) : (
+      value
+    )
+  );
+
   return (
     <tr>
       <td>{id}</td>
-      <td>
-        {isEditing ? (
-          <input
-            className='input-edit'
-            type='email'
-            value={email}
-            onChange={(e) => onChange(id, 'email', e.target.value)}
-          />
-        ) : (
-          email
-        )}
-      </td>
-      <td>
-        {isEditing ? (
-          <input
-            className='input-edit'
-            type='text'
-            value={name}
-            onChange={(e) => onChange(id, 'name', e.target.value)}
-          />
-        ) : (
-          name
-        )}
-      </td>
-      <td>
-        {isEditing ? (
-          <input
-            className='input-edit'
-            type='text'
-            value={login}
-            onChange={(e) => onChange(id, 'login', e.target.value)}
-          />
-        ) : (
-          login
-        )}
-      </td>
+      <td>{renderCell(email, 'email', 'email')}</td>
+      <td>{renderCell(name, 'text', 'name')}</td>
+      <td>{renderCell(login, 'text', 'login')}</td>
       <td className='actions'>
         {isEditing ? (
           <button className='icon-save' onClick={() => onSave(pessoa)}>
@@ -76,9 +57,7 @@ const Usuarios = () => {
         setPessoas(response.data.users);
       } catch (error) {
         console.error('Erro ao buscar pessoas:', error);
-        setError(
-          'Erro ao carregar os dados. Por favor, tente novamente mais tarde.',
-        );
+        setError('Erro ao carregar os dados. Por favor, tente novamente mais tarde.');
       }
     };
     fetchPessoas();
@@ -98,8 +77,8 @@ const Usuarios = () => {
     setEditValues({ ...editValues, [field]: value });
     setPessoas((prevPessoas) =>
       prevPessoas.map((pessoa) =>
-        pessoa.id === id ? { ...pessoa, [field]: value } : pessoa,
-      ),
+        pessoa.id === id ? { ...pessoa, [field]: value } : pessoa
+      )
     );
   };
 
@@ -111,29 +90,28 @@ const Usuarios = () => {
           email: editValues.email,
           name: editValues.name,
           login: editValues.login,
-        },
+        }
       );
       const updatedPessoa = response.data.user;
       setPessoas((prevPessoas) =>
-        prevPessoas.map((p) => (p.id === updatedPessoa.id ? updatedPessoa : p)),
+        prevPessoas.map((p) => (p.id === updatedPessoa.id ? updatedPessoa : p))
       );
       setEditingId(null);
       setEditValues({});
     } catch (error) {
       console.error('Erro ao atualizar pessoa:', error);
+      setError('Erro ao atualizar pessoa. Por favor, tente novamente mais tarde.');
     }
   };
 
   const handleDelete = async (id) => {
-    const confirmDelete = window.confirm(
-      'Você tem certeza que deseja excluir este usuário?',
-    );
-    if (confirmDelete) {
+    if (window.confirm('Você tem certeza que deseja excluir este usuário?')) {
       try {
         await axios.delete(`http://localhost:3000/api/usuarios/${id}`);
         setPessoas((prevPessoas) => prevPessoas.filter((p) => p.id !== id));
       } catch (error) {
         console.error('Erro ao deletar pessoa:', error);
+        setError('Erro ao deletar pessoa. Por favor, tente novamente mais tarde.');
       }
     }
   };
@@ -150,7 +128,7 @@ const Usuarios = () => {
                 <th className='column-email'>Email</th>
                 <th className='column-nome'>Nome</th>
                 <th className='column-login'>Login</th>
-                <th className='column-actions'>Actions</th>
+                <th className='column-actions'>Ações</th>
               </tr>
             </thead>
             <tbody>
