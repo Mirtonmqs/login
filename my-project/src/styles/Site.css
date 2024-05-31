@@ -365,7 +365,7 @@ input[type="text"]::placeholder {
   background-color: #FFFFFF;
   position: fixed;
   top: 22px;
-  right: 245px;
+  right: 255px;
   color: #444;
 }
 
@@ -377,7 +377,7 @@ input[type="text"]::placeholder {
   top: 22px;
   right: 280px;
   color: #333;
-  margin-right: -89px;
+  margin-right: -73px;
 }
 
 /* Sidebar */

@@ -121,7 +121,7 @@ const Site2 = () => {
             
                 <img
                   className="img-perfil"
-                  src={user ? user.img : 'nao carregou'}
+                  src={user ? `/uploads/${user.img}` : 'nao carregou'}
                   
                 />
                 <span className="user-name">
