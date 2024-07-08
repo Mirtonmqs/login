@@ -206,9 +206,9 @@ label {
 }
 
 .logo-sidebar {
-  width: 40px;
-  height: 45px;
-  margin-left: 32px;
+  width: 30px;
+  height: 0 auto;
+  margin-left: 55px;
   margin-top: 25px;
 }
 
