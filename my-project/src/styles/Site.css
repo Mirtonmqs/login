@@ -1,9 +1,12 @@
+* {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+}
+
 /* geral */
 .titulo {
   font-size: 40px;
   text-align: center;
   margin-top: 25px;
-  font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
@@ -68,20 +71,19 @@ label {
   height: 550px;
   margin: auto;
 }
+
 .button-login {
   font-size: 20px;
   width: 88%;
   background-color: #6c63fe;
   padding: 20px;
   margin: 0px 30px 50px 30px;
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .inscricao {
   text-align: center;
-  font-family: "Roboto", sans-serif;
   font-weight: 200;
   font-style: normal;
   font-size: 18px;
@@ -107,7 +109,6 @@ label {
   background-color: #6c63fe;
   padding: 20px;
   margin: 0px 30px 50px 30px;
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
   margin-top: -25px;
@@ -121,7 +122,7 @@ label {
 
 .form-usuarios {
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 2px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-top: 30px;
@@ -205,17 +206,33 @@ label {
   display: inline;
 }
 
+.topo-sidebar a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
 .logo-sidebar {
   width: 30px;
   height: 0 auto;
-  margin-left: 55px;
+  margin-left: 65px;
   margin-top: 25px;
+}
+/* titulo sidebar */
+.logo-text {
+  margin-left: 12px; 
+  margin-top: 20px; 
+  font-size: 24px; 
+  font-weight: bold; 
+  color: white;
 }
 
 .icon-home,
 .icon-user,
 .icon-logout {
   margin-right: 10px;
+  width: 18px;
+  height: 18px;
 }
 
 .icon-toggle-sidebar {
@@ -233,7 +250,6 @@ label {
   font-size: 14px;
   background-color: transparent;
   border: none;
-  font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
@@ -274,6 +290,12 @@ body {
   margin-top: 70px;
 }
 
+.home-content {
+  padding: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
 .table-users {
   background-color: #ffff;
   margin: 40px;
@@ -285,14 +307,12 @@ body {
   color: #555;
   font-size: 20px;
   margin: 40px 40px;
-  font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
 .text1 {
   margin: 50px;
-  font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
@@ -345,7 +365,6 @@ input[type="text"]::placeholder {
   font-size: 13px;
   margin-top: 6px;
   margin-left: 6px;
-  font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: normal;
 }

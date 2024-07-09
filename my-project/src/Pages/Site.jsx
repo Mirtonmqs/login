@@ -38,16 +38,11 @@ const Site2 = () => {
     switch (activeComponent) {
       case "home":
         return (
-          <div className="table-users">
-            <h1 className="title-table">Tables</h1>
-            <div className="text1">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A
-                inventore maxime voluptatem assumenda, officiis ex corporis sint
-                cupiditate praesentium quis distinctio dicta possimus cum
-                laboriosam nulla, nisi deleniti. Corrupti, nisi?
-              </p>
-            </div>
+          <div className="home-content">
+            <p>
+              Bem-vindo à página inicial! Aqui você pode encontrar informações
+              e acessar outras seções do site.
+            </p>
           </div>
         );
       case "usuarios":
@@ -68,6 +63,7 @@ const Site2 = () => {
           <div className="topo-sidebar">
             <a href="#">
               <img className="logo-sidebar" src={logo} alt="Logo" />
+              <span className="logo-text">Aspec</span>
             </a>
           </div>
           <div className="menu-sidebar">
