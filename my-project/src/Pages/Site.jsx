@@ -1,20 +1,20 @@
-import React, { useState, useContext } from "react";
-import { FiSearch } from "react-icons/fi";
-import { LuMessageCircle } from "react-icons/lu";
-import { IoNotificationsOffOutline, IoSunnyOutline } from "react-icons/io5";
-import { CiLogout, CiUser, CiHome } from "react-icons/ci";
-import { FiMoon } from "react-icons/fi";
-import logo from "@/img/logoaspec.png";
-import perfil from "@/img/perfil.png";
-import "@/styles/Site.css";
-import Usuarios from "@/Pages/Usuarios";
-import { UserContext, UserProvider } from "@/Pages/Context";
+import React, { useState, useContext } from 'react';
+import { FiSearch } from 'react-icons/fi';
+import { LuMessageCircle } from 'react-icons/lu';
+import { IoNotificationsOffOutline, IoSunnyOutline } from 'react-icons/io5';
+import { CiLogout, CiUser, CiHome } from 'react-icons/ci';
+import { FiMoon } from 'react-icons/fi';
+import logo from '@/img/logoaspec.png';
+import perfil from '@/img/perfil.png';
+import '@/styles/Site.css';
+import Usuarios from '@/Pages/Usuarios';
+import { UserContext, UserProvider } from '@/Pages/Context';
 
 const Site2 = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState('');
   const [darkMode, setDarkMode] = useState(false);
-  const [activeComponent, setActiveComponent] = useState("home");
+  const [activeComponent, setActiveComponent] = useState('home');
   const user = useContext(UserContext);
 
   const toggleSidebar = () => {
@@ -27,7 +27,7 @@ const Site2 = () => {
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
-    console.log("Pesquisar:", searchQuery);
+    console.log('Pesquisar:', searchQuery);
   };
 
   const toggleDarkMode = () => {
@@ -36,16 +36,16 @@ const Site2 = () => {
 
   const renderActiveComponent = () => {
     switch (activeComponent) {
-      case "home":
+      case 'home':
         return (
           <div className="home-content">
             <p>
-              Bem-vindo à página inicial! Aqui você pode encontrar informações
-              e acessar outras seções do site.
+              Bem-vindo à página inicial! Aqui você pode encontrar informações e
+              acessar outras seções do site.
             </p>
           </div>
         );
-      case "usuarios":
+      case 'usuarios':
         return <Usuarios />;
       default:
         return null;
@@ -54,31 +54,32 @@ const Site2 = () => {
 
   return (
     <div
-      className={`${sidebarOpen ? "open" : "closed"} ${
-        darkMode ? "dark-mode" : "light-mode"
+      className={`${sidebarOpen ? 'open' : 'closed'} ${
+        darkMode ? 'dark-mode' : 'light-mode'
       }`}
     >
       <div className="container">
         <div className="sidebar">
-          <div className="topo-sidebar">
-            <a href="#">
+          <div className="sidebar-top">
+            <a href="#" className="container-logo">
               <img className="logo-sidebar" src={logo} alt="Logo" />
               <span className="logo-text">Aspec</span>
             </a>
-          </div>
-          <div className="menu-sidebar">
-            <button onClick={() => setActiveComponent("home")}>
-              <CiHome className="icon-home" aria-label="Início" />
-              Início
-            </button>
-            <button onClick={() => setActiveComponent("usuarios")}>
+            <ul className="sidebar-nav">
+              <li className="sidebar-nav-title">Navegação</li>
+              <li className="sidebar-item">
+                <CiHome className="icon-home" aria-label="Início" />
+                <a href="">Início</a>
+              </li>
+              <li className="sidebar-item">
               <CiUser className="icon-user" aria-label="Usuários" />
-              Usuários
-            </button>
-            <button onClick={() => setActiveComponent("logout")}>
+                <a href="">Usuários</a>
+              </li>
+              <li className="sidebar-item">
               <CiLogout className="icon-logout" aria-label="Sair" />
-              Sair
-            </button>
+                <a href="">Sair</a>
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -124,12 +125,12 @@ const Site2 = () => {
                   alt="Profile"
                 />
                 <span className="user-name">
-                  {user ? user.name : "Carregando..."}
+                  {user ? user.name : 'Carregando...'}
                 </span>
               </div>
             </form>
           </div>
-          <div className="corpo">{renderActiveComponent()}</div>
+          <div className="body">{renderActiveComponent()}</div>
         </div>
       </div>
     </div>
