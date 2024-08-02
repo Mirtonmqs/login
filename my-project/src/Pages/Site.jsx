@@ -39,10 +39,7 @@ const Site2 = () => {
       case 'home':
         return (
           <div className="home-content">
-            <p>
-              Bem-vindo à página inicial! Aqui você pode encontrar informações e
-              acessar outras seções do site.
-            </p>
+            <p>Tables</p>
           </div>
         );
       case 'usuarios':
@@ -72,25 +69,23 @@ const Site2 = () => {
                 <a href="">Início</a>
               </li>
               <li className="sidebar-item">
-              <CiUser className="icon-user" aria-label="Usuários" />
+                <CiUser className="icon-user" aria-label="Usuários" />
                 <a href="">Usuários</a>
               </li>
               <li className="sidebar-item">
-              <CiLogout className="icon-logout" aria-label="Sair" />
+                <CiLogout className="icon-logout" aria-label="Sair" />
                 <a href="">Sair</a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="bg-site">
-          <div className="header">
-            <div className="btn-menu">
-              <button className="toggle-sidebar" onClick={toggleSidebar}>
-                <span className="icon-toggle-sidebar">&#9776;</span>
-              </button>
+        <div className="main">
+          <div className={`navbar-bg ${sidebarOpen ? 'open' : ''}`}>
+            <div className="toggle-sidebar" onClick={toggleSidebar}>
+              <span className="icon-toggle-sidebar">&#9776;</span>
             </div>
-            <form className="form-site" onSubmit={handleSearchSubmit}>
+            <form className="form-button" onSubmit={handleSearchSubmit}>
               <input
                 type="text"
                 placeholder="Search projects..."
@@ -100,6 +95,20 @@ const Site2 = () => {
               <button className="btn-lupa" type="submit">
                 <FiSearch />
               </button>
+            </form>
+            <div className="navbar-collapse">
+              <div className="icons-sidebar">
+                <div className="icon-notification">
+                  <LuMessageCircle />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* <div className="bg-site">
+          <div className="header">
+            <div className="btn-menu">
 
               <div className="perfil">
                 <button className="icon-msg" type="button">
@@ -131,7 +140,7 @@ const Site2 = () => {
             </form>
           </div>
           <div className="body">{renderActiveComponent()}</div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
