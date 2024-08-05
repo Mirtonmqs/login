@@ -1,9 +1,8 @@
 import React, { useState, useContext } from 'react';
-import { FiSearch } from 'react-icons/fi';
+import { FiSearch, FiMoon } from 'react-icons/fi';
 import { LuMessageCircle } from 'react-icons/lu';
 import { IoNotificationsOffOutline, IoSunnyOutline } from 'react-icons/io5';
 import { CiLogout, CiUser, CiHome } from 'react-icons/ci';
-import { FiMoon } from 'react-icons/fi';
 import logo from '@/img/logoaspec.png';
 import perfil from '@/img/perfil.png';
 import '@/styles/Site.css';
@@ -50,12 +49,9 @@ const Site2 = () => {
   };
 
   return (
-    <div
-      className={`${sidebarOpen ? 'open' : 'closed'} ${
-        darkMode ? 'dark-mode' : 'light-mode'
-      }`}
-    >
-      <div className="container">
+    <div className={`${sidebarOpen ? 'open' : 'closed'} ${darkMode ? 'dark-mode' : 'light-mode'}`}>
+      <div className="site-container">
+        {/* Sidebar */}
         <div className="sidebar">
           <div className="sidebar-top">
             <a href="#" className="container-logo">
@@ -64,24 +60,25 @@ const Site2 = () => {
             </a>
             <ul className="sidebar-nav">
               <li className="sidebar-nav-title">Navegação</li>
-              <li className="sidebar-item">
+              <li className="sidebar-item" onClick={() => setActiveComponent('home')}>
                 <CiHome className="icon-home" aria-label="Início" />
-                <a href="">Início</a>
+                <a href="#">Início</a>
               </li>
-              <li className="sidebar-item">
+              <li className="sidebar-item" onClick={() => setActiveComponent('usuarios')}>
                 <CiUser className="icon-user" aria-label="Usuários" />
-                <a href="">Usuários</a>
+                <a href="#">Usuários</a>
               </li>
               <li className="sidebar-item">
                 <CiLogout className="icon-logout" aria-label="Sair" />
-                <a href="">Sair</a>
+                <a href="#">Sair</a>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* main */}
+        {/* Main content */}
         <div className="main">
+          {/* Navbar */}
           <div className={`navbar-bg ${sidebarOpen ? 'open' : ''}`}>
             <div className="toggle-sidebar" onClick={toggleSidebar}>
               <span className="icon-toggle-sidebar">&#9776;</span>
@@ -117,21 +114,26 @@ const Site2 = () => {
                   </div>
                   <img
                     className="img-perfil"
-                    src={
-                      user && user.img
-                        ? `http://localhost:3000/${user.img}`
-                        : perfil
-                    }
+                    src={user && user.img ? `http://localhost:3000/${user.img}` : perfil}
                     alt="Profile"
                   />
-                  <span className="user-name">
-                    {user ? user.name : 'Carregando...'}
-                  </span>
+                  <span className="user-name">{user ? user.name : 'Carregando...'}</span>
                 </div>
               </div>
             </div>
           </div>
+
+          {/* Content */}
         </div>
+          <div className="content">
+            {renderActiveComponent()}
+
+            {/* Nova div abaixo do navbar */}
+            <div className="content-below-navbar">
+              <h2>Bem-vindo ao painel de controle</h2>
+              <p>Aqui você pode gerenciar seus projetos, visualizar notificações e muito mais.</p>
+            </div>
+          </div>
       </div>
     </div>
   );
