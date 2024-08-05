@@ -80,6 +80,7 @@ const Site2 = () => {
           </div>
         </div>
 
+        {/* main */}
         <div className="main">
           <div className={`navbar-bg ${sidebarOpen ? 'open' : ''}`}>
             <div className="toggle-sidebar" onClick={toggleSidebar}>
@@ -98,49 +99,39 @@ const Site2 = () => {
             </form>
             <div className="navbar-collapse">
               <div className="icons-sidebar">
-                <div className="icon-notification">
-                  <LuMessageCircle />
+                <div className="perfil">
+                  <div className="icons-container">
+                    <button className="icon-msg" type="button">
+                      <LuMessageCircle />
+                    </button>
+                    <button className="icon-sino" type="button">
+                      <IoNotificationsOffOutline />
+                    </button>
+                    <button
+                      className="toggle-dark-mode-btn"
+                      type="button"
+                      onClick={toggleDarkMode}
+                    >
+                      {darkMode ? <IoSunnyOutline /> : <FiMoon />}
+                    </button>
+                  </div>
+                  <img
+                    className="img-perfil"
+                    src={
+                      user && user.img
+                        ? `http://localhost:3000/${user.img}`
+                        : perfil
+                    }
+                    alt="Profile"
+                  />
+                  <span className="user-name">
+                    {user ? user.name : 'Carregando...'}
+                  </span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        {/* <div className="bg-site">
-          <div className="header">
-            <div className="btn-menu">
-
-              <div className="perfil">
-                <button className="icon-msg" type="button">
-                  <LuMessageCircle />
-                </button>
-                <button className="icon-sino" type="button">
-                  <IoNotificationsOffOutline />
-                </button>
-                <button
-                  className="toggle-dark-mode-btn"
-                  type="button"
-                  onClick={toggleDarkMode}
-                >
-                  {darkMode ? <IoSunnyOutline /> : <FiMoon />}
-                </button>
-                <img
-                  className="img-perfil"
-                  src={
-                    user && user.img
-                      ? `http://localhost:3000/${user.img}`
-                      : perfil
-                  }
-                  alt="Profile"
-                />
-                <span className="user-name">
-                  {user ? user.name : 'Carregando...'}
-                </span>
-              </div>
-            </form>
-          </div>
-          <div className="body">{renderActiveComponent()}</div>
-        </div> */}
       </div>
     </div>
   );

@@ -275,7 +275,8 @@ body {
 }
 
 .main {
-  background-color: #007BFF;
+  display: flex;
+  background-color: #fff;
   padding: 2px;
   width: 100%;
 }
@@ -289,7 +290,6 @@ body {
 
 .navbar-bg.open {
   margin-left: 270px;
-  /* Ajuste a margem conforme necessário */
 }
 
 /* button toggle sidebar */
@@ -312,7 +312,7 @@ body {
 }
 
 .form-button input[type="text"] {
-  padding: 8px 10px;
+  padding: 10px 10px;
   border: 1px solid #F4F7F9;
   outline: none;
   transition: border-color 0.3s ease;
@@ -322,6 +322,7 @@ body {
 
 .btn-lupa {
   display: flex;
+  font-size: 18px;
   align-items: center;
   justify-content: center;
   padding: 10px;
@@ -329,61 +330,42 @@ body {
   background-color: #F4F7F9;
   color: #444;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-
-/*navbar-collapse e icons-sidebar */
-.navbar-collapse {
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
-}
-
-.icon-notification {
-  font-size: 14px;
-  color: #333;
-  cursor: pointer;
-  margin: 1px 380px;
-}
-
-.icon-sino {
-  font-size: 19px;
-  border: none;
-  background-color: #FFFFFF;
-  position: fixed;
-  top: 22px;
-  right: 190px;
-  color: #333;
 }
 
 .perfil {
-  align-items: center;
-  font-size: 10px;
   display: flex;
-  right: 100px;
+  align-items: center;
   position: fixed;
-  margin-top: 4px;
-  margin-right: -65px;
+  top: 12px;
+  right: 30px;
 }
 
-.user-name {
-  font-size: 13px;
-  margin-top: 6px;
-  margin-left: 6px;
-  font-weight: 300;
-  font-style: normal;
+.icon-msg,
+.icon-sino,
+.toggle-dark-mode-btn {
+  font-size: 19px;
+  border: none;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  margin: 0 10px;
+  color: #444;
 }
 
 .img-perfil {
   width: 40px;
   height: 40px;
   border-radius: 100%;
-  margin-top: 10px;
-  margin-left: 14px;
+  margin: 0 10px;
 }
 
-/* Sidebar */
+.user-name {
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  margin-left: 6px;
+}
+
+/* Sidebar closed */
 .closed .sidebar {
   width: 0;
 }
@@ -408,53 +390,37 @@ body {
   color: white;
 }
 
-/* Dark Mode Header, Background Site, body */
+/* Outros estilos no modo escuro */
 .dark-mode .header,
+.dark-mode .main,
+.dark-mode .perfil,
 .dark-mode .bg-site,
 .dark-mode .body {
   background-color: #202634;
+  color: white;
 }
 
-/* Dark Mode Form Input */
 .dark-mode .form-site input {
-  background-color: #293042;
+  background-color: #202634;
   color: white;
 }
 
 /* Toggle Dark Mode Button */
-.toggle-dark-mode-btn {
-  background-color: #00008b;
-  color: #555;
-  background: none;
-  border: transparent;
-  margin-right: 12px;
-  margin-top: 12px;
-  font-size: 20px;
-}
-
-/* Dark Mode Icons */
-.dark-mode .icon-msg,
-.dark-mode .icon-sino {
-  background-color: #00008b;
+.dark-mode .toggle-dark-mode-btn {
   color: white;
-  background: none;
-  border: transparent;
 }
 
+.dark-mode .icon-msg,
+.dark-mode .icon-sino,
+.dark-mode .toggle-dark-mode-btn {
+  color: white;
+  background-color: #202634;
+}
+
+/* Outras regras específicas do modo escuro */
 .dark-mode .btn-lupa {
-  background-color: #293042;
-}
-
-.dark-mode .text1 {
-  color: #293042;
-}
-
-.dark-mode .table td {
-  color: #293042;
-}
-
-.dark-mode .bg-usuarios {
-  background-color: #1a1a33;
+  background-color: #202634;
+  color: #ddd;
 }
 
 .dark-mode .form-usuarios {
@@ -467,16 +433,9 @@ body {
 .dark-mode .table th {
   background-color: #293042;
   font-weight: bold;
-  color: #293042;
+  color: #e5e2ff;
 }
 
-.dark-mode .table th,
-.dark-mode .table td {
-  color: #e5e2ff;
-  padding: 10px;
-  border: 1px solid #ddd;
-  background-color: #293042;
-}
 
 .dark-mode .actions button {
   background-color: #293042;
@@ -487,3 +446,4 @@ body {
   cursor: pointer;
   font-size: 20px;
 }
+
