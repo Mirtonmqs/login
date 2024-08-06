@@ -1,4 +1,3 @@
-* {}
 
 /* geral */
 .titulo {
@@ -17,6 +16,24 @@
   width: 100%;
   height: 100%;
 }
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  background-color: #fff;
+  padding: 2px;
+  width: 100%;
+}
+
+.navbar-bg {
+  display: flex;
+  align-items: center;
+  transition: margin-left 0.3s ease;
+}
+
 
 /* formulario */
 .form {
@@ -287,7 +304,8 @@ body {
   transition: margin-left 0.3s ease;
 }
 
-.navbar-bg.open {
+.navbar-bg.open,
+.content.open {
   margin-left: 270px;
 }
 
@@ -363,6 +381,32 @@ body {
   font-style: normal;
   margin-left: 6px;
 }
+
+/* Estilos para o container principal */
+.content {
+  padding-top: 6px; /* Espaço para o navbar fixo */
+  margin: 10px 20px ;
+  transition: margin-left 0.3s ease;
+}
+
+/* Estilos para a nova div abaixo do navbar */
+.content-below-navbar {
+  background-color: #f8f9fa; /* Cor de fundo clara */
+  padding: 20px;
+  border: 1px solid #dee2e6; /* Borda sutil */
+  border-radius: 8px; /* Cantos arredondados */
+}
+
+.content-below-navbar h2 {
+  font-size: 24px;
+  margin-bottom: 10px 10px;
+}
+
+.content-below-navbar p {
+  font-size: 16px;
+  color: #6c757d; /* Cor de texto sutil */
+}
+
 
 /* Sidebar closed */
 .closed .sidebar {
