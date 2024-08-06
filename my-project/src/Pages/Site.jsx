@@ -125,7 +125,7 @@ const Site2 = () => {
 
           {/* Content */}
         </div>
-          <div className="content">
+        <div className={`content ${sidebarOpen ? 'open' : ''}`}>
             {renderActiveComponent()}
 
             {/* Nova div abaixo do navbar */}

@@ -287,8 +287,11 @@ body {
   transition: margin-left 0.3s ease;
 }
 
-.navbar-bg.open {
+/* sidebar aberto */
+.navbar-bg.open,
+.content.open {
   margin-left: 270px;
+  padding-left: 25px;
 }
 
 /* button toggle sidebar */
@@ -363,6 +366,30 @@ body {
   font-style: normal;
   margin-left: 6px;
 }
+
+/* content */
+.content {
+  margin: 30px;
+  transition: margin-left 0.3s ease;
+}
+
+.content-below-navbar {
+  background-color: #f8f9fa; /* Cor de fundo clara */
+  padding: 20px;
+  border: 1px solid #dee2e6; /* Borda sutil */
+  border-radius: 8px; /* Cantos arredondados */
+}
+
+.content-below-navbar h2 {
+  font-size: 24px;
+  margin-bottom: 10px 10px;
+}
+
+.content-below-navbar p {
+  font-size: 16px;
+  color: #6c757d; /* Cor de texto sutil */
+}
+
 
 /* Sidebar closed */
 .closed .sidebar {
