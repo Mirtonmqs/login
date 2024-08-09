@@ -128,11 +128,13 @@ const Site2 = () => {
         <div className={`content ${sidebarOpen ? 'open' : ''}`}>
             {renderActiveComponent()}
 
-            {/* Nova div abaixo do navbar */}
-            <div className="content-below-navbar">
-              <h2>Bem-vindo ao painel de controle</h2>
-              <p>Aqui você pode gerenciar seus projetos, visualizar notificações e muito mais.</p>
-            </div>
+            {/* Condição para renderizar a content-below-navbar */}
+            {activeComponent === 'home' && (
+              <div className="content-below-navbar">
+                <h2>Bem-vindo ao painel de controle</h2>
+                <p>Aqui você pode gerenciar seus projetos, visualizar notificações e muito mais.</p>
+              </div>
+            )}
           </div>
       </div>
     </div>
